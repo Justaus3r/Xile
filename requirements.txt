@@ -1,0 +1,5 @@
+rich
+psutil
+clear_screen
+getmac
+pythonping
