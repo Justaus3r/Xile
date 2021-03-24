@@ -1,5 +1,5 @@
 ===============
-Getting started
+Penta
 ===============
 Penta is a pure python shell program that i have written to improve my understanding of python.i am working on it actively for further improvements.
 
@@ -58,6 +58,7 @@ Here is a list of Commands that are supported:
 26:chistory ------------------------- Shows Commands history
 
 27:about -------------------------- About Penta
+
 
 More comming soon
 
