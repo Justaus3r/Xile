@@ -23,12 +23,42 @@ Here is a table of commands that Penta supports as of now.
 | ------------- |:-------------:               | 
 |23-Mar-2021    | Initial Release(Beta version)|
 #### Upcomming update
---?]
+--?
 ### Windows installation
 Download the setup from link above and execute it.after installing the setup,be sure to add the directory present in Program Files named bin to [PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
-## Linux installation
+### Linux installation
 Download the zip file from link above and follow following steps
-- 1
+- Unzip and file and cd to the directory.
+- Open terminal here and type ```chmod +x Setup.sh ``` to give executable permission to script.
+- Run the script i.e ./Setup.sh
+- Restart the terminal after installing the setup
+- Type ```penta``` and Have Fun 🥳...
+
+**NOTE** Please be sure that your /bin directory is on $PATH.
+## Build from source
+#### Windows:
+- First install all the dependencies using ```pip install -r requirements.txt```.
+- if you dont want to build it then its all done.otherwise follow ⬇️ 
+- First install py2exe using ```pip install py2exe```.
+- Now Create a file named setup.py or whatever.
+- if you want to add icon then:
+```
+from distutils.core import setup
+import py2exe
+setup_dict = dict(console=[{'script':'Penta.py','icon_resources':[(0,'ICON.ico')]}])
+setup(**setup_dict)
+```
+- Otherwise there is no need to create a dictionary.
+```
+from distutils.core import setup
+import py2exe
+setup(console=['Penta.py'])
+```
+-now use python setup.py py2exe to build it.
+#### Linux:
+- Clone the repo and install the dependencies.
+- For linux i have used pyinstaller.you can install pyinstaller using ```python3 -m pip install pyinstaller```
+- Now use ```pyinstaller --onefile Penta.py``` to build.be sure to copy the ```configs``` and ```bin``` directory to the executable directory. 
 ### TODO LIST
 - [x] Support for changing directories
 - [x] Support for listing directories
