@@ -28,7 +28,7 @@ Here is a table of commands that Penta supports as of now.
 - [x] Support for changing directories
 - [x] Support for listing directories
 - [x] Support for creating files and directories
-- [x] Support for deleting files anf directories
+- [x] Support for deleting files and directories
 - [ ] Support for Formatting Drives
 - [x] Clears console
 - [x] Read files
@@ -40,7 +40,8 @@ Here is a table of commands that Penta supports as of now.
 - [x] Copy files and directories
 - [x] Change title of console
 - [x] Print current time and date
-- [ ] Encrypt Files anf folders
+- [ ] Encrypt Files and folders
+- [ ] Tools for Pentesting
 - [x] Ping.Only available for linux(for now atleast)
 - [x] Show network info
 - [x] Kill processes
@@ -51,4 +52,5 @@ Here is a table of commands that Penta supports as of now.
 - [x] Supports Help command
 - [x] Supports banner(Manual)
 - [x] Supports custom prompt(Manual)
+- [ ] Much more...
 
