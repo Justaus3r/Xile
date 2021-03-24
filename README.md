@@ -7,6 +7,7 @@
 [![Issues](https://img.shields.io/github/issues-raw/Justaus3r/Penta?maxAge=25000)](https://github.com/Justaus3r/Penta/issues)
 [![GitHub Release](https://img.shields.io/github/release/Justaus3r/Penta?style=flat)]()
 [![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat)](https://github.com/Justaus3r/Penta/blob/main/docs/CODE_OF_CONDUCT.md) 
+[![Read the Docs](https://readthedocs.org/projects/penta/badge/?version=latest)](https://penta.readthedocs.io/en/latest/?badge=latest)
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
 >>Penta is under active development.anything can change without prior notice.
  
@@ -99,4 +100,5 @@ All contributions are welcomed.fork this repo,improve it and [pull requests](htt
 Distributed under GPLV3.0
 ### Note:
 A General documentation is also available at [readthedocs.io](https://penta.readthedocs.io/en/latest/).you are free to improve the doc.
+
 ![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=Justaus3r)
