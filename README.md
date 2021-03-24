@@ -5,8 +5,7 @@
 [![Active](http://img.shields.io/badge/Status-Active-green.svg)](https://github.com/Justaus3r)
 [![GitHub commits since](https://img.shields.io/github/commits-since/Justaus3r/Penta/1.0)]() 
 [![Issues](https://img.shields.io/github/issues-raw/Justaus3r/Penta?maxAge=25000)](https://github.com/Justaus3r/Penta/issues)
-[![GitHub Release](https://img.shields.io/github/release/Justaus3r/Penta?style=flat)]() 
-[![Travis CI](https://travis-ci.org/Justaus3r/Penta?branch=main)](https://travis-ci.org/Justaus3r/Penta)
+[![GitHub Release](https://img.shields.io/github/release/Justaus3r/Penta?style=flat)]()
 [![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat)](https://github.com/Justaus3r/Penta/blob/main/docs/CODE_OF_CONDUCT.md) 
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
 >>Penta is under active development.anything can change without prior notice.
