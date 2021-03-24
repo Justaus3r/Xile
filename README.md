@@ -23,7 +23,12 @@ Here is a table of commands that Penta supports as of now.
 | ------------- |:-------------:               | 
 |23-Mar-2021    | Initial Release(Beta version)|
 #### Upcomming update
---?
+--?]
+### Windows installation
+Download the setup from link above and execute it.after installing the setup,be sure to add the directory present in Program Files named bin to [PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
+## Linux installation
+Download the zip file from link above and follow following steps
+- 1
 ### TODO LIST
 - [x] Support for changing directories
 - [x] Support for listing directories
