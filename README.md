@@ -97,5 +97,6 @@ or open an [issue](https://github.com/Justaus3r/Penta/issues)
 All contributions are welcomed.fork this repo,improve it and [pull requests](https://github.com/Justaus3r/Penta/pulls)
 ### License
 Distributed under GPLV3.0
-
+### Note:
+A General documentation is also available at [readthedocs.io](https://penta.readthedocs.io/en/latest/).you are free to improve the doc.
 ![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=Justaus3r)
