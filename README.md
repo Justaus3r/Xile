@@ -22,7 +22,7 @@ Here is a table of commands that Penta supports as of now.
 | Date:         | Comment:                     | 
 | ------------- |:-------------:               | 
 |23-Mar-2021    | Initial Release(Beta version)|
-#### Upcomming update
+#### Upcoming update
 --?
 ### Windows installation
 Download the setup from link above and execute it.after installing the setup,be sure to add the directory present in Program Files named bin to [PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
@@ -81,11 +81,20 @@ setup(console=['Penta.py'])
 - [x] Show network info
 - [x] Kill processes
 - [x] Shutdown,reboot and logout
-- [x] Search files.needs a bit improvement
+- [x] Search files.needs a bit of improvement
 - [x] Change permissions of file
 - [x] commands history
 - [x] Supports Help command
 - [x] Supports banner(Manual)
 - [x] Supports custom prompt(Manual)
 - [ ] Much more...
+### Bug report
+Found any bug!
+Report it to me at x-neron@pm.me
+or open an [issue](https://github.com/Justaus3r/Penta/issues)
+### Contributions:
+All contributions are welcomed.fork this repo,improve it and [pull requests](https://github.com/Justaus3r/Penta/pulls)
+### License
+Distributed under GPLV3.0
 
+![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=Justaus3r)
