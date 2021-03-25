@@ -99,6 +99,6 @@ All contributions are welcomed.fork this repo,improve it and [pull requests](htt
 ### License
 Distributed under GPLV3.0
 ### Note:
-A General documentation is also available at [readthedocs.io](https://penta.readthedocs.io/en/latest/).you are free to improve the doc.
+A General documentation is also available at [readthedocs.io](https://penta.readthedocs.io/en/latest/).Feel free to improve the doc.you can do so by editing this [File](https://github.com/Justaus3r/Penta/blob/main/docs/index.rst).
 
 ![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=Justaus3r)
