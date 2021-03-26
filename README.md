@@ -11,7 +11,7 @@
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
 >>Penta is under active development.anything can change without prior notice.
  
-Penta is a pure python shell program that i have created to improve my understanding of python.As of now it supports all the basic commands(or thats what i think) that a shell program should have.i am working on it actively and improvements will be made in future.
+Penta is a pure python **Command line** shell program that i have created to improve my understanding of python.As of now it supports all the basic commands(or thats what i think) that a shell program should have.i am working on it actively and improvements will be made in future.
 Here is a table of commands that Penta supports as of now.
 ![List of commands-69](https://drive.google.com/uc?export=download&id=1ZfUtJmYf5mmUhKh8CHAfylyl069LWmwn)
 
