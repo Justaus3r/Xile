@@ -4,7 +4,4 @@ clear_screen
 getmac
 pythonping
 pytube
-pyautogui
-opencv-python
-numpy
 
