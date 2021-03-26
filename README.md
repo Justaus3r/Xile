@@ -36,7 +36,7 @@ Download the zip file from link above and follow following steps
 - Restart the terminal after installing the setup
 - Type ```penta``` and Have Fun 🥳...
 
-**NOTE** Please be sure that your /bin directory is on $PATH.
+**NOTE** Please be sure that your /bin directory is on $PATH. 
 ## Build from source
 #### Windows:
 - First install all the dependencies using ```pip install -r requirements.txt```.
@@ -58,7 +58,7 @@ setup(console=['Penta.py'])
 ```
 -now use python setup.py py2exe to build it.
 #### Linux:
-- Clone the repo and install the dependencies.
+- Clone the repo and install the dependencies(also install them as sudo user or you may face some problems).
 - For linux i have used pyinstaller.you can install pyinstaller using ```python3 -m pip install pyinstaller```
 - Now use ```pyinstaller --onefile Penta.py``` to build.be sure to copy the ```configs``` and ```bin``` directory to the executable directory. 
 ### TODO LIST
