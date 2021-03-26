@@ -59,6 +59,8 @@ Here is a list of Commands that are supported:
 
 27:about -------------------------- About Penta
 
+28:gtube---------------------------- A little utility to download videos and playlists from youtube
+
 
 More comming soon
 
