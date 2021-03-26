@@ -103,7 +103,7 @@ try:
          print("[red]%s[/red]"%err)  
 except NameError:
         print("[red]Configuration file Error[/red]")
-#####################################################################
+######################################################################
     #prompt
     # check the configuration file to see if custom prompt is to be printed
     #CHECK OS
