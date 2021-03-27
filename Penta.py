@@ -997,7 +997,7 @@ while(True):
         thetable.add_row('help','Show this help box.\n_________________________________________________________')
         thetable.add_row('chistory','prints commads history.\n_________________________________________________________')
         thetable.add_row('gtube <-v>/<-p> -q <video quality> <url>','a utility to download videos from youtube.use \'-v\' to download a video or \'-p\' to download a playlist.\n_________________________________________________________')
-        thetable.add_row('troute <host or url>','Trace possible routes and measures transit delay between packets across internet protocol network.Only vailable for linux(as of now atleast).\n_________________________________________________________')
+        thetable.add_row('troute <host or url>','Trace possible routes and measures transit delay between packets across internet protocol network.Only available for linux(as of now atleast).\n_________________________________________________________')
         thetable.add_row('about','About Penta.')
         theconsole.print(thetable) 
         print("""
