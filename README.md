@@ -29,13 +29,20 @@ Here is a table of commands that Penta supports as of now.
 ### Windows installation
 Download the setup from link above and execute it.after installing the setup,be sure to add the directory present in Program Files(or where you have installed Penta) named bin to [PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
 ### Linux installation
+**if you are using bash instaed of zsh,then don't use the Setup.sh,instead follow the steps afterward.** 
 Download the zip file from link above and follow following steps
 - Unzip and file and cd to the directory.
 - Open terminal here and type ```chmod +x Setup.sh ``` to give executable permission to script.
 - Run the script i.e ./Setup.sh
 - Restart the terminal after installing the setup
 - Type ```penta``` and Have Fun 🥳...
-
+#### Steps for bash Users:
+Bash users would have to do the configurations manually:
+- Unzip the file and copy\move the ```bin``` ,```configs``` folder and executable named Penta to home directory
+- Give executable permission to Penta.sh and copy\move it to /bin folder(linux bin folder and be sure that its on $PATH)
+- (Optional)Now edit your ```.bashrc``` file and add a alias at the end of it: ```alias penta=Penta.sh```
+### Uninstallation:
+Uninstallation in windows is pretty straightforward ,you just uninstall it like other softwares but there is no uninstalller for linux(well it ain't installation in first place but some configuration).delete Penta.sh from /bin folder,edit ```.bashrc``` file and remove the alias if any. and also remove the folder named ```bin```,```configs``` and Penta from home directory.
 **NOTE** Please be sure that your /bin directory is on $PATH. 
 ## Build from source
 #### Windows:
