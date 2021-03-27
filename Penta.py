@@ -1037,7 +1037,7 @@ while(True):
                     video = pytube.YouTube(vid_url)
                     thestream = video.streams.get_by_itag(itag)
                     if os.name == 'nt':
-                        thestream.download("C:\\Users\\{os.getlogin()}\\Downloads")
+                        thestream.download(f"C:\\Users\\{os.getlogin()}\\Downloads")
                     else:
                         thestream.download(f"/home/{psutil.Process().username()}/Downloads")
                 except:
@@ -1060,7 +1060,7 @@ while(True):
                         video = pytube.YouTube(urls)
                         thestream = video.streams.get_by_itag(itag)
                         if os.name == 'nt':
-                            thestream.download("C:\\Users\\{os.getlogin()}\\Downloads")
+                            thestream.download(f"C:\\Users\\{os.getlogin()}\\Downloads")
                         else:
                             thestream.download(f"/home/{psutil.Process().username()}/Downloads")                     
                 except:
