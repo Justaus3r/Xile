@@ -30,6 +30,7 @@ Here is a table of commands that Penta supports as of now.
 Download the setup from link above and execute it.after installing the setup,be sure to add the directory present in Program Files(or where you have installed Penta) named bin to [PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
 ### Linux installation
 **if you are using bash instead of zsh,then don't use the Setup.sh(or just edit it and add .bashrc instead of .zshrc),instead follow the steps afterward.** 
+
 Download the zip file from link above and follow following steps
 - Unzip and file and cd to the directory.
 - Open terminal here and type ```chmod +x Setup.sh ``` to give executable permission to script.
