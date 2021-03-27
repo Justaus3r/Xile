@@ -42,9 +42,11 @@ Bash users would have to do the configurations manually:
 - Unzip the file and copy\move the ```bin``` ,```configs``` folder and executable named Penta to home directory
 - Give executable permission to Penta.sh and copy\move it to /bin folder(linux bin folder and be sure that its on $PATH)
 - (Optional)Now edit your ```.bashrc``` file and add a alias at the end of it: ```alias penta=Penta.sh```
+
+**NOTE** Please be sure that your /bin directory is on $PATH. 
+
 ### Uninstallation:
 Uninstallation in windows is pretty straightforward ,you just uninstall it like other softwares but there is no uninstalller for linux(well it ain't installation in first place but some configuration).delete Penta.sh from /bin folder,edit ```.bashrc``` file and remove the alias if any. and also remove the folder named ```bin```,```configs``` and Penta from home directory.
-**NOTE** Please be sure that your /bin directory is on $PATH. 
 ## Build from source
 #### Windows:
 - First install all the dependencies using ```pip install -r requirements.txt```.
