@@ -61,6 +61,7 @@ Here is a list of Commands that are supported:
 
 28:gtube---------------------------- A little utility to download videos and playlists from youtube
 
+29:troute------------------------------------tracerouting ,only available for linux as of now
 
 More comming soon
 
