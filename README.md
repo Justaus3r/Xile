@@ -88,6 +88,7 @@ setup(console=['Penta.py'])
 - [x] Change title of console
 - [x] Print current time and date
 - [ ] Encrypt Files and folders
+- [x] Download videos and playlists from youtube 
 - [ ] Tools for Pentesting
 - [x] Ping.Only available for linux(for now atleast)
 - [x] Show network info
