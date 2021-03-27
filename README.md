@@ -83,7 +83,7 @@ setup(console=['Penta.py'])
 - [x] Rename files and directories
 - [x] Move files and directories
 - [x] Show username
-- [x] Tracerouting 
+- [x] Tracerouting(for linux only atleast for now) 
 - [x] Show os version 
 - [x] Copy files and directories
 - [x] Change title of console
