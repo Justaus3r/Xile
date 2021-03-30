@@ -176,7 +176,7 @@ else:
 #####################################################################                  
 while(True):
     #if the bool(i.e:__prompt__cwd) is true then set prompt to current directory
-    if __prompt__cwd == True:
+    if __prompt__cwd is True:
         __prompt = os.getcwd()
     command = input(f"{__prompt}>>")
     #check OS And Store Commands for History CommaNd
