@@ -249,7 +249,7 @@ while(True):
              print("[red]%s[/red]"%err)
     elif command == 'exit()' or command == 'quit()' or command == 'exit' or command == 'quit':
         break                
-    elif command[:4] == 'sudo' and os.path.isfile(command[5:]) is True and check_onichans_os != 'Win':
+    elif command[:4] == 'sudo' and os.path.isfile(command[5:]) is True and check_onichans_os() != 'Win':
         filename,extension = os.path.splitext(command[5:])
         if extension != '':
             if extension.lower() == '.py':
