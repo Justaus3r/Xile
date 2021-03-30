@@ -313,7 +313,7 @@ while(True):
         filename,extension = os.path.splitext(command)
         if extension != '':
             if extension.lower() == '.py':
-                if check_onichans_os == 'linux':
+                if check_onichans_os() == 'linux':
                     try:
                         cmd = f'python3 {filename}{extension}'
                         args = shlex.split(cmd)
