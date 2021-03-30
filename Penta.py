@@ -604,12 +604,12 @@ while(True):
                 shutil.move(src,des)
         except OSError as err:
             shutil.copy(source,dest)
-        except OSError as err:
-            print("[red]%s[/red]"%err)
         except FileNotFoundError:
             print("[red]File/Directory not found[/red]")  
         except IndexError:
-            print("[red]File operand missing![/red]")         
+            print("[red]File operand missing![/red]")
+        except:
+            print("[red]Unknown Error[/red]"%err)            
     elif command[:4] == 'mdir':
         path = command[5:]
         try:
