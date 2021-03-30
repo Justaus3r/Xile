@@ -28,9 +28,8 @@ def check_onichans_os():
   if os.name == 'nt':
      Os = 'Win'
      return Os
-  else:
-     Os = 'linux'
-     return Os
+  Os = 'linux'
+  return Os
 #~VERSION AND BUILD DATE-----------------
 _VER = "1.0Beta"
 _BULD_DATE = "21-March-2021"
