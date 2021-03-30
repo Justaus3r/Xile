@@ -52,6 +52,7 @@ Bash users would have to do the configurations manually:
 Uninstallation in windows is pretty straightforward ,you just uninstall it like other softwares but there is no uninstalller for linux(well it ain't installation in first place but some configuration).delete Penta.sh from /bin folder,edit ```.bashrc``` file and remove the alias if any. and also remove the folder named ```bin```,```configs``` and Penta from home directory.
 ## Build from source
 #### Windows:
+I have switched to **[Nuitka]**(https://nuitka.net/) for compiling python for performance and efficiency,you can also download it for building python apps.
 - First install all the dependencies using ```pip install -r requirements.txt```.
 - if you dont want to build it then its all done.otherwise follow ⬇️ 
 - First install py2exe using ```pip install py2exe```.
