@@ -894,7 +894,7 @@ while(True):
             Permissions = raw_command.split()[1]
             #check if permissions given are symbolic or absolute
             #if permissions given are integer then they r absolute otherwise symbolic
-            if type(int(Permissions)) == int:
+            if type(int(Permissions)) is int:
                 if Permissions == '0':
                     os.chmod(Thefile,0o0)
                 elif Permissions == '1':
