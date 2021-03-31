@@ -1,2 +1,0 @@
-- name: Twilio SMS
-  uses: twilio-labs/actions-sms@v1
