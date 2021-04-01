@@ -33,7 +33,7 @@ Here is a list of Commands that are supported:
 
 14:create -------------------- Create files
  
-15:ping-host -------------------- Ping an host.Not available for windows
+15:ping-host -------------------- Ping an host.
 
 16:configip --------------------- Shows network info
 
@@ -61,7 +61,7 @@ Here is a list of Commands that are supported:
 
 28:gtube---------------------------- A little utility to download videos and playlists from youtube
 
-29:troute------------------------------------tracerouting ,only available for linux as of now
+29:troute------------------------------------tracerouting.
 
 More comming soon
 
