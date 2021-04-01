@@ -88,7 +88,7 @@ setup(console=['Penta.py'])
 - [x] Rename files and directories
 - [x] Move files and directories
 - [x] Show username
-- [x] Tracerouting(for linux only atleast for now) 
+- [x] Tracerouting 
 - [x] Show os version 
 - [x] Copy files and directories
 - [x] Change title of console
@@ -96,7 +96,7 @@ setup(console=['Penta.py'])
 - [ ] Encrypt Files and folders
 - [x] Download videos and playlists from youtube 
 - [ ] Tools for Pentesting
-- [x] Ping.Only available for linux(for now atleast)
+- [x] Ping
 - [x] Show network info
 - [x] Kill processes
 - [x] Shutdown,reboot and logout
