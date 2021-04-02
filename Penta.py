@@ -1,6 +1,6 @@
 """
 Penta 2021
-quiet stupiditely i figured that i could extract commands using .split() method and wouldn't have gotten into all this hassle but  done is done
+quiet stupiditely i figured that i could extract commands using .split() method and wouldn't have gotten into all this hassle but......
 My poor code ~ 
 """
 import os #for os thingis
