@@ -61,7 +61,10 @@ Here is a list of Commands that are supported:
 
 28:gtube---------------------------- A little utility to download videos and playlists from youtube
 
-29:troute------------------------------------tracerouting.
+29:gfile ----------------------------- Download files from a server
+
+30:troute------------------------------------tracerouting.
+
 
 More comming soon
 
