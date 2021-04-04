@@ -114,6 +114,7 @@ setup(console=['Penta.py'])
 - [x] Supports Help command
 - [x] Supports banner(Manual)
 - [x] Supports custom prompt(Manual)
+- [x] Download Files from a server 
 - [ ] Much more...
 # 🔴 Note: 🔴
 Please do not confuse with the word "pure python" as some core operations such as shutting down pc ,etc require interaction with OS API(or thats what i think after my research),and low level languages are used to do so.python is a high level language and i think it can't interact with Os like C and other ll languages do.so i have used system commands to do such things.**if you think i am wrong**,Please do correct me 🙂..
