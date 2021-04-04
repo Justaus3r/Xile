@@ -20,12 +20,19 @@ Here is a table of commands that Penta supports as of now.
 | -------------   | ------------                                                                                       |
 | Windows         | [Pentasetup.exe](https://getlink123.com/direct/G4vYrOFXSIKz)|| 
 | Linux           | [Penta-linux.zip](https://drive.google.com/uc?export=download&id=1zh2-uv_dd1cd3d3pkv87xPDXUO7N1tKe)
-### Changelog
+### Changelog(Active)
 | Date:         | Comment:                                                          | 
 | ------------- |:-------------:                                                    | 
 |23-Mar-2021    | Initial Release(Beta version)                                     |
 |28-Mar-2021    | Bug fix for windows and switched to nuitka for python compilation |
 |01-Apr-2021    | Fixed Typos and added ping and traceroute support for Windows     | 
+|04-Apr-2021    | Can now download files from a server                              |
+
+### Changelog(Versionwise)
+| Date:         | Comment:                                                          | 
+| ------------- |:-------------:                                                    | 
+|23-Mar-2021    | Initial Release(Beta version)                                     |
+
 #### Upcoming update
 --?
 ### Windows installation
