@@ -5,4 +5,4 @@ getmac
 pythonping
 pytube
 icmplib
-
+requests
