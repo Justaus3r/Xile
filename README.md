@@ -107,6 +107,7 @@ setup(console=['Penta.py'])
 - [ ] Encrypt Files and folders
 - [x] Download videos and playlists from youtube 
 - [ ] Tools for Pentesting
+- [x] Shows all the processes 
 - [x] Ping
 - [x] Show network info
 - [x] Kill processes
