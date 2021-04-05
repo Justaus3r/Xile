@@ -111,6 +111,7 @@ setup(console=['Penta.py'])
 - [x] Show network info
 - [x] Kill processes
 - [x] Shutdown,reboot and logout
+- [x] TAB Completion 
 - [x] Search files.needs a bit of improvement
 - [x] Change permissions of file
 - [x] commands history
