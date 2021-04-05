@@ -20,7 +20,7 @@ Here is a table of commands that Penta supports as of now.
 | -------------   | ------------                                                                                       |
 | Windows         | [Pentasetup.exe](https://getlink123.com/direct/G4vYrOFXSIKz)|| 
 | Linux           | [Penta-linux.zip](https://drive.google.com/uc?export=download&id=1zh2-uv_dd1cd3d3pkv87xPDXUO7N1tKe)
-### Changelog(Active)
+### Changelog(Commitwise)
 | Date:         | Comment:                                                          | 
 | ------------- |:-------------:                                                    | 
 |23-Mar-2021    | Initial Release(Beta version)                                     |
