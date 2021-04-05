@@ -7,3 +7,4 @@ pytube
 icmplib
 requests
 tqdm
+prompt_toolkit
