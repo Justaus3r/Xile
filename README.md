@@ -27,6 +27,7 @@ Here is a table of commands that Penta supports as of now.
 |28-Mar-2021    | Bug fix for windows and switched to nuitka for python compilation |
 |01-Apr-2021    | Fixed Typos and added ping and traceroute support for Windows     | 
 |04-Apr-2021    | Can now download files from a server                              |
+|05-Apr-2021    | Tab Completion for both Windows and Linux                         |
 
 ### Changelog(Versionwise)
 | Date:         | Comment:                                                          | 
