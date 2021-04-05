@@ -6,3 +6,4 @@ pythonping
 pytube
 icmplib
 requests
+tqdm
