@@ -305,7 +305,7 @@ while(True):
                 try:
                     cmd = f"sudo java -jar {filename}{extension}"
                     arg = shlex.split(cmd)
-                    subprocess(arg)
+                    subprocess.run(arg)
                 except OSError as err:
                     print("[red]%s[/red]"%err)  
             else:
