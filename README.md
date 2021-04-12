@@ -3,6 +3,7 @@
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 ![Contribution](https://img.shields.io/badge/Contributions-Welcome-<brightgreen>)
 [![Active](http://img.shields.io/badge/Status-Active-green.svg)](https://github.com/Justaus3r)
+![language](https://badgen.net/badge/Language/Python/cyan)
 [![GitHub commits since](https://img.shields.io/github/commits-since/Justaus3r/Penta/1.0)]() 
 [![Issues](https://img.shields.io/github/issues-raw/Justaus3r/Penta?maxAge=25000)](https://github.com/Justaus3r/Penta/issues)
 [![GitHub Release](https://img.shields.io/github/release/Justaus3r/Penta?style=flat)]()
