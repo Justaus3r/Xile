@@ -1,5 +1,5 @@
-Documentation 👋
-~~~~~~~~~~~~~~~
+Readme.md 👋
+~~~~~~~~~~~
 
 Penta
 -----
