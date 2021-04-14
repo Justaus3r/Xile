@@ -64,7 +64,7 @@ def check_onichans_os():
   Os = 'linux'
   return Os
 #~VERSION AND BUILD DATE-----------------
-_VER = "1.0Beta"
+_VER = "1.0.2Beta"
 _BULD_DATE = "21-March-2021"
 #~PROGRAM STARTING/boot DIRECTORY
 _prg_start_dir = os.getcwd()
