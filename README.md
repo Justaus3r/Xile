@@ -1,5 +1,5 @@
 ### Readme.md 👋
-#### Active development paused for time being
+>>Active development paused for time being
 ## Penta
 [![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg)](https://github.com/Justaus3r/Penta)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
