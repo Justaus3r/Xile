@@ -1,0 +1,11 @@
+rich
+psutil
+clear_screen
+getmac
+pythonping
+pytube
+icmplib
+requests
+tqdm
+prompt_toolkit
+seedir
