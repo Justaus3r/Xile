@@ -40,6 +40,8 @@ Here is a table of commands that Penta supports as of now.
 |04-Apr-2021    | Can now download files from a server                                    |
 |05-Apr-2021    | Tab Completion for both Windows and Linux and shows all the processes   |
 |30-Apr-2021    | Read Markdown and list directories as a tree                            |
+|22-May-2021    | Can detect a git initialized Directory                                  |
+
 
 #### Upcoming update
 --?
