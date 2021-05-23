@@ -47,17 +47,16 @@ Here is a table of commands that Penta supports as of now.
 --?
 ### Windows installation
 **Penta will only run on windows 10.**
-
 Download the setup from link above and execute it.after installing the setup,be sure to add the directory present in Program Files(or where you have installed Penta) named bin to [PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
-### Linux installation
-**if you are using bash instead of zsh,then edit Setup.sh and replace .zshrc with .bashrc** 
+### Linux installation:
+**if you are using bash instead of zsh,then edit Setup.sh and replace ```.zshrc``` with ```.bashrc```** 
 Download the zip file from link above and follow following steps
 - Unzip and file and cd to the directory.
 - Open terminal here and type ```chmod +x Setup.sh ``` to give executable permission to script.
 - Run the script i.e ./Setup.sh
 - Restart the terminal after installing the setup
 - Type ```penta``` and Have Fun 🥳...
-#### Manual Installation:
+#### Manual Installation(if the script doesn't work):
 - Unzip the file and copy\move the ```bin``` ,```configs``` folder and executable named Penta to home directory
 - Give executable permission to Penta.sh and copy\move it to /bin folder(linux bin folder and be sure that its on $PATH)
 - (Optional)Now edit your ```.bashrc``` file and add a alias at the end of it: ```alias penta=Penta.sh```
@@ -67,31 +66,37 @@ Download the zip file from link above and follow following steps
 ### Uninstallation:
 Uninstallation in windows is pretty straightforward ,you just uninstall it like other softwares but there is no uninstalller for linux.delete Penta.sh from /bin folder,edit ```.bashrc``` file and remove the alias if any. and also remove the folder named ```bin```,```configs``` and Penta from home directory.
 ## Build from source
-#### Windows:
-**I have switched to** **[Nuitka](https://nuitka.net/)** **for its excellent performance and efficiency,you can also download it for building python apps.**
+### Windows/Linux:
+Penta can be built from pyinstaller,py2exe and Nuitka.
+[Icon](https://www.flaticon.com/free-icon/command-window_656) used in Building Penta.
+**[Nuitka(Recommended)](https://nuitka.net/)**([User manual](https://nuitka.net/doc/user-manual.html)):
+- First install nuitka using ```pip install Nuitka```.
+- Now open cmd in same Folder as the Project Folder and Type ```python3 -m nuitka --plugin-enable=tk-inter --windows-icon-from-ico=IconFileIfAnyIfNotThenSkipThisFlag --standalone Penta.py```
+- For the First time it's going to take some time depending on your network speed as nuitka installs a gcc compiler,for all the messages press Y.
+- Your Executable will be compiled in Penta.dist.All the files in the dist folder are necessary to run Penta.if you want to make a single file executable then you can use the --onefile flag but i wouldn't recommend it. 
 
-- First install all the dependencies using ```pip install -r requirements.txt```.
-- if you dont want to build it then its all done.otherwise follow ⬇️ 
+**[Py2exe](https://www.py2exe.org/)**:
 - First install py2exe using ```pip install py2exe```.
 - Now Create a file named setup.py or whatever.
-- if you want to add icon then:
+- if you want to add icon *then*:
 ```
 from distutils.core import setup
 import py2exe
 setup_dict = dict(console=[{'script':'Penta.py','icon_resources':[(0,'ICON.ico')]}])
 setup(**setup_dict)
 ```
-- Otherwise there is no need to create a dictionary.
+- Otherwise there is no need to create a dictionary i.e:
 ```
 from distutils.core import setup
 import py2exe
 setup(console=['Penta.py'])
 ```
 -now use python setup.py py2exe to build it.
-#### Linux:
-- Clone the repo and install the dependencies(also install them as sudo user or you may face some problems).
-- For linux i have used pyinstaller.you can install pyinstaller using ```python3 -m pip install pyinstaller```
-- Now use ```pyinstaller --onefile Penta.py``` to build.be sure to copy the ```configs``` and ```bin``` directory to the executable directory. 
+
+**[Pyinstaller](https://www.pyinstaller.org/)**
+- install pyinstaller using ```pip install pyinstaller```
+- Now just cd to Project Folder and use ```pyinstaller --icon IconFileIfAny --onefile Penta.py```
+- Your project will be built under the dist directory.
 ### TODO LIST
 - [x] Support for changing directories
 - [x] Support for listing directories
@@ -115,6 +120,7 @@ setup(console=['Penta.py'])
 - [ ] Tools for Pentesting
 - [x] Shows all the processes 
 - [x] Ping
+- [X] Detect a git initialized directory 
 - [x] Show network info
 - [x] List directories as a tree 
 - [x] Kill processes
