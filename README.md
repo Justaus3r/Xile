@@ -47,6 +47,7 @@ Here is a table of commands that Penta supports as of now.
 --?
 ### Windows installation
 **Penta will only run on windows 10.**
+
 Download the setup from link above and execute it.after installing the setup,be sure to add the directory present in Program Files(or where you have installed Penta) named bin to [PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
 ### Linux installation:
 **if you are using bash instead of zsh,then edit Setup.sh and replace ```.zshrc``` with ```.bashrc```** 
@@ -69,6 +70,7 @@ Uninstallation in windows is pretty straightforward ,you just uninstall it like 
 ### Windows/Linux:
 Penta can be built from pyinstaller,py2exe and Nuitka.
 [Icon](https://www.flaticon.com/free-icon/command-window_656) used in Building Penta.
+
 **[Nuitka(Recommended)](https://nuitka.net/)**([User manual](https://nuitka.net/doc/user-manual.html)):
 - First install nuitka using ```pip install Nuitka```.
 - Now open cmd in same Folder as the Project Folder and Type ```python3 -m nuitka --plugin-enable=tk-inter --windows-icon-from-ico=IconFileIfAnyIfNotThenSkipThisFlag --standalone Penta.py```
