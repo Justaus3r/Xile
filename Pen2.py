@@ -1,6 +1,6 @@
 # PART OF PENTA PROJECT WRITTEN INTO PYTHON 2 
 # WARNING:EXPERIMENTAL FILE ,PROBABLY ONLY SUPPORTS 2 OR 3 COMMANDS
-# COPYRIGHT Justaus3r
+# COPYRIGHT Justaus3r.
 from __future__ import with_statement
 from __future__ import absolute_import
 
