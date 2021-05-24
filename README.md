@@ -48,7 +48,7 @@ Here is a table of commands that Penta supports as of now.
 ### Windows installation
 **Penta will only run on windows 10.**
 
-Download the setup from link above and execute it.after installing the setup,be sure to add the directory present in Program Files(or where you have installed Penta) named bin to [PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
+Download the setup from link above and execute it.after installing the setup,be sure to add the directory (present in installation Directory) named **bin** to [PATH](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
 ### Linux installation:
 **if you are using bash instead of zsh,then edit Setup.sh and replace ```.zshrc``` with ```.bashrc```** 
 Download the zip file from link above and follow following steps
