@@ -73,7 +73,7 @@ Penta can be built from pyinstaller,py2exe and Nuitka.
 
 **[Nuitka(Recommended)](https://nuitka.net/)**([User manual](https://nuitka.net/doc/user-manual.html)):
 - First install nuitka using ```pip install Nuitka```.
-- Now open cmd in same Folder as the Project Folder and Type ```python3 -m nuitka --plugin-enable=tk-inter --windows-icon-from-ico=IconFileIfAnyIfNotThenSkipThisFlag --standalone Penta.py```
+- Now open cmd in same Folder as the Project Folder and Type ```python3 -m nuitka --plugin-enable=tk-inter --windows-icon-from-ico=IconFileIfAnyIfNotThenSkipThisFlag --standalone Penta.py```(for linux remove the windows related flags)
 - For the First time it's going to take some time depending on your network speed as nuitka installs a gcc compiler,for all the messages press Y.
 - Your Executable will be compiled in Penta.dist.All the files in the dist folder are necessary to run Penta.if you want to make a single file executable then you can use the --onefile flag but i wouldn't recommend it. 
 
