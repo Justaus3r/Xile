@@ -30,7 +30,7 @@ Here is a table of commands that Penta supports as of now.i also converted a par
 | Date:         | Comment:                                     | 
 | ------------- |:-------------:                               | 
 |23-Mar-2021    | Initial Release(Beta version)                |
-|30-May-2021    | 1.3.0 Release                                |
+|30-May-2021    | Release 1.3.0                                |
 ### Changelog(Commitwise)
 | Date:         | Comment:                                                                | 
 | ------------- |:-------------:                                                          | 
