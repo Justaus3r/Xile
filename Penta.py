@@ -82,8 +82,8 @@ def check_onichans_os():
   Os = 'linux'
   return Os
 #~VERSION AND BUILD DATE-----------------
-_VER = "1.0.3"
-_BULD_DATE = "14-April-2021"
+_VER = "1.3.0"
+_BULD_DATE = "1-June-2021"
 # Func to check if the current directory is a git directory
 def if_git_dir():
     if os.path.exists('.git'):
