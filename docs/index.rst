@@ -6,7 +6,6 @@ Penta
 |Issues| |GitHub Release| |Code of Conduct| |Read the Docs| |Open
 Source|
 
-``Active Developement paused for time being``
 
 Penta is a pure python command interpreter that i have created to
 improve my python.As of now it supports all the basic commands(or thats
