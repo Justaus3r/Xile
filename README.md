@@ -12,7 +12,7 @@
 [![GitHub Release](https://img.shields.io/github/release/Justaus3r/Penta?style=flat)]()
 [![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat)](https://github.com/Justaus3r/Penta/blob/main/docs/CODE_OF_CONDUCT.md) 
 [![Read the Docs](https://readthedocs.org/projects/penta/badge/?version=latest)](https://penta.readthedocs.io/en/latest/?badge=latest)
-[![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
+[![Open Source](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://opensource.org/)
 >> Active Developement paused for time being
   
 Penta is a pure python command interpreter that i have created to improve my python.As of now it supports all the basic commands(or thats what i think) that a shell program should have.i am working on it actively and improvements will be made in future.
