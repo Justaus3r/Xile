@@ -967,7 +967,7 @@ while(True):
         window = Tk()
         window.title("About")
         Label(window,text="A open-source Shell program written in python").pack()
-        Label(window,text="Version:1.0.2").pack()
+        Label(window,text=f"Version:{_VER}").pack()
         Label(window,text="License:Distributed under GPLv3").pack()
         Label(window,text="Report bugs and suggestions at:x-neron@pm.me").pack()
         window.mainloop()
