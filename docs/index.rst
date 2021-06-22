@@ -1,46 +1,45 @@
-Readme.md 👋
-~~~~~~~~~~~
-
 Penta
 -----
 
-|GPLv3 License| |Contribution| |Active| |language| |GitHub commits
-since| |Issues| |GitHub Release| |Code of Conduct| |Read the Docs| |Open
-Source| >>Penta is under active development.anything can change without
-prior notice.Also available at
-`bitbucket <https://bitbucket.org/Justaus3r/penta/src/master/>`__.(dunno
-if i will update there frequently cuz i don't use git command-line that
-much.)
+|Awesome Badges| |GPLv3 License| |Contribution| |Active|
+|made-with-python| |semver| |GitHub commits since| |PRs Welcome|
+|Issues| |GitHub Release| |Code of Conduct| |Read the Docs| |Open
+Source|
 
-Penta is a pure python **Command line** shell program that i have
-created to improve my understanding of python.As of now it supports all
-the basic commands(or thats what i think) that a shell program should
-have.i am working on it actively and improvements will be made in
-future. Here is a table of commands that Penta supports as of now. |List
-of commands-69|
+``Active Developement paused for time being``
+
+Penta is a pure python command interpreter that i have created to
+improve my python.As of now it supports all the basic commands(or thats
+what i think) that a shell program should have.i am working on it
+actively and improvements will be made in future. Here is a table of
+commands that Penta supports as of now.i also converted a part of
+project into Python2(as an experiment),if you want to check that out
+just see the ``Pent2.py``.
+
+|List of commands-69|
 
 Download
 ~~~~~~~~
-
-+--------------------+----------------------------------------------------------------------------------------------------------+----+
-| Operating System   | Download                                                                                                 |
-+====================+==========================================================================================================+====+
-| Windows            | `Pentasetup.exe <https://getlink123.com/direct/G4vYrOFXSIKz>`__                                          |    |
-+--------------------+----------------------------------------------------------------------------------------------------------+----+
-| Linux              | `Penta-linux.zip <https://drive.google.com/uc?export=download&id=1zh2-uv_dd1cd3d3pkv87xPDXUO7N1tKe>`__   |
-+--------------------+----------------------------------------------------------------------------------------------------------+----+
++--------------------+---------------------------------------------------------------------------------------------------+
+| Operating System   | Download                                                                                          |
++====================+===================================================================================================+
+| Windows            | `Pentasetup.zip <https://mega.nz/file/481gUD5S#yEr5yZzfTepSVgwppwfBAPzuOxpsqmOnj70YEwSmCy8>`__    |
++--------------------+---------------------------------------------------------------------------------------------------+
+| Linux              | `Penta-linux.zip <https://mega.nz/file/JplklbiI#ON2yVjeH0dnPeNwy5pVf8ZgRXzkAjIxIHvLz9AG3-RE>`__   |
++--------------------+---------------------------------------------------------------------------------------------------+
 
 Changelog(Versionwise)
-~~~~~~~~~~~~~~~~~~~~~~
-
+^^^^^^^^^^^^^^^^^^^^^^
 +---------------+---------------------------------+
 | Date:         | Comment:                        |
 +===============+=================================+
 | 23-Mar-2021   | Initial Release(Beta version)   |
 +---------------+---------------------------------+
+| 30-May-2021   | Release 1.3.0                   |
++---------------+---------------------------------+
 
 Changelog(Commitwise)
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
 +---------------+-------------------------------------------------------------------------+
 | Date:         | Comment:                                                                |
@@ -55,63 +54,83 @@ Changelog(Commitwise)
 +---------------+-------------------------------------------------------------------------+
 | 05-Apr-2021   | Tab Completion for both Windows and Linux and shows all the processes   |
 +---------------+-------------------------------------------------------------------------+
+| 30-Apr-2021   | Read Markdown and list directories as a tree                            |
++---------------+-------------------------------------------------------------------------+
+| 22-May-2021   | Can detect a git initialized Directory                                  |
++---------------+-------------------------------------------------------------------------+
+
+
 
 Upcoming update
 ^^^^^^^^^^^^^^^
 
---? ### Windows installation **Penta won't run on windows 7,please
-upgrade or use it as a script**
+--? 
 
-Download the setup from link above and execute it.after installing the
-setup,be sure to add the directory present in Program Files(or where you
-have installed Penta) named bin to
-`PATH <https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/>`__.
-### Linux installation **if you are using bash instead of zsh,then don't
-use the Setup.sh(or just edit it and add .bashrc instead of
-.zshrc),instead follow the steps afterward.**
+Windows installation 
+^^^^^^^^^^^^^^^^^^^^
 
-Download the zip file from link above and follow following steps - Unzip
-and file and cd to the directory. - Open terminal here and type
-``chmod +x Setup.sh`` to give executable permission to script. - Run the
-script i.e ./Setup.sh - Restart the terminal after installing the setup
-- Type ``penta`` and Have Fun 🥳... #### Steps for bash Users: Bash users
-would have to do the configurations manually: - Unzip the file and
-copythe ``bin`` ,\ ``configs`` folder and executable named Penta to home
-directory - Give executable permission to Penta.sh and copyit to /bin
-folder(linux bin folder and be sure that its on $PATH) - (Optional)Now
-edit your ``.bashrc`` file and add a alias at the end of it:
-``alias penta=Penta.sh``
+**Penta will only run on windows 10.**
+
+- Download the setup from link above and execute it.after installing the setup,be sure to add the directory (present in installation Directory) named **bin** to PATH
+
+Linux installation 
+^^^^^^^^^^^^^^^^^^^^
+**if you are using bash instead of zsh,then edit Setup.sh and replace ``.zshrc`` with ``.bashrc``** 
+
+Download the zip file from link above and follow following steps
+
+- Unzip and file and cd to the directory.
+- Open terminal here and type ``chmod +x Setup.sh `` to give executable permission to script.
+- Run the script i.e ./Setup.sh
+- Restart the terminal after installing the setup
+- Type ``penta`` and Have Fun 🥳...
+
+Manual Installation(if the script doesn't work):
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- Unzip the file and copy\move the ``bin`` ,``configs`` folder and executable named Penta to home directory
+- Give executable permission to Penta.sh and copy\move it to /bin folder(linux bin folder and be sure that its on $PATH)
+- (Optional)Now edit your ``.bashrc`` file and add a alias at the end of it: ``alias penta=Penta.sh``
 
 **NOTE** Please be sure that your /bin directory is on $PATH.
 
 Uninstallation:
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^
 
 Uninstallation in windows is pretty straightforward ,you just uninstall
-it like other softwares but there is no uninstalller for linux(well it
-ain't installation in first place but some configuration).delete
+it like other softwares but there is no uninstalller for linux.delete
 Penta.sh from /bin folder,edit ``.bashrc`` file and remove the alias if
 any. and also remove the folder named ``bin``,\ ``configs`` and Penta
-from home directory. ## Build from source #### Windows: **I have
-switched to** **`Nuitka <https://nuitka.net/>`__** **for its excellent
-performance and efficiency,you can also download it for building python
-apps.**
+from home directory.
 
--  First install all the dependencies using
-   ``pip install -r requirements.txt``.
--  if you dont want to build it then its all done.otherwise follow ⬇️
--  First install py2exe using ``pip install py2exe``.
--  Now Create a file named setup.py or whatever.
--  if you want to add icon then:
+Build from source
+~~~~~~~~~~~~~~~~~
+Windows/Linux:
+^^^^^^^^^^^^^^
 
-   ::
+Penta can be built from pyinstaller,py2exe and Nuitka.
+`Icon <https://www.flaticon.com/free-icon/command-window_656>`__ used in
+Building Penta.
 
-       from distutils.core import setup
-       import py2exe
-       setup_dict = dict(console=[{'script':'Penta.py','icon_resources':[(0,'ICON.ico')]}])
-       setup(**setup_dict)
+Nuitka(Recommended): 
+^^^^^^^^^^^^^^^^^^
+- First install nuitka using ``pip install Nuitka``. - Now open cmd in same Folder as the Project Folder and Type ``python3 -m nuitka --plugin-enable=tk-inter --windows-icon-from-ico=IconFileIfAnyIfNotThenSkipThisFlag --standalone Penta.py``\ (for linux remove the windows related flags).
+- For the First time it's going to take some time depending on your network speed as nuitka installs a gcc compiler,for all the messages press Y. 
+- Your Executable will be compiled in Penta.dist.All the files in the dist folder are necessary to run Penta.if you want to make a single file executable then you can use the --onefile flag but i wouldn't recommend it.
 
--  Otherwise there is no need to create a dictionary.
+Py2exe: 
+^^^^^^
+- First install py2exe using ``pip install py2exe``.
+- Now Create a file named setup.py or whatever.
+- if you want to add icon *then*:
+
+::
+
+    from distutils.core import setup
+    import py2exe
+    setup_dict = dict(console=[{'script':'Penta.py','icon_resources':[(0,'ICON.ico')]}])
+    setup(**setup_dict)
+
+-  Otherwise there is no need to create a dictionary i.e:
 
    ::
 
@@ -119,76 +138,111 @@ apps.**
        import py2exe
        setup(console=['Penta.py'])
 
-   -now use python setup.py py2exe to build it. #### Linux:
--  Clone the repo and install the dependencies(also install them as sudo
-   user or you may face some problems).
--  For linux i have used pyinstaller.you can install pyinstaller using
-   ``python3 -m pip install pyinstaller``
--  Now use ``pyinstaller --onefile Penta.py`` to build.be sure to copy
-   the ``configs`` and ``bin`` directory to the executable directory.
-   ### TODO LIST
--  [x] Support for changing directories
--  [x] Support for listing directories
--  [x] Support for creating files and directories
--  [x] Support for deleting files and directories
--  [ ] Support for Formatting Drives
--  [x] Clears console
--  [x] Read files
--  [x] Show system info
--  [x] Rename files and directories
--  [x] Move files and directories
--  [x] Show username
--  [x] Tracerouting
--  [x] Show os version
--  [x] Copy files and directories
--  [x] Change title of console
--  [x] Print current time and date
--  [ ] Encrypt Files and folders
--  [x] Download videos and playlists from youtube
--  [ ] Tools for Pentesting
--  [x] Shows all the processes
--  [x] Ping
--  [x] Show network info
--  [x] Kill processes
--  [x] Shutdown,reboot and logout
--  [x] TAB Completion
--  [x] Search files.needs a bit of improvement
--  [x] Change permissions of file
--  [x] commands history
--  [x] Supports Help command
--  [x] Supports banner(Manual)
--  [x] Supports custom prompt(Manual)
--  [x] Download Files from a server
--  [ ] Much more... # 🔴 Note: 🔴 Please do not confuse with the word
-   "pure python" as some core operations such as shutting down pc ,etc
-   require interaction with OS API(or thats what i think after my
-   research),and low level languages are used to do so.python is a high
-   level language and i think it can't interact with Os like C and other
-   ll languages do.so i have used system commands to do such
-   things.\ **if you think i am wrong**,Please do correct me 🙂.. ### Bug
-   report Found any bug! Report it to me at x-neron@pm.me or open an
-   `issue <https://github.com/Justaus3r/Penta/issues>`__ ###
-   Contributions: All contributions are welcomed.fork this repo,improve
-   it and `pull requests <https://github.com/Justaus3r/Penta/pulls>`__
-   ### License Distributed under GPLV3.0 ### Note: A General
-   documentation is also available at
-   `readthedocs.io <https://penta.readthedocs.io/en/latest/>`__.Feel
-   free to improve the doc.you can do so by editing this
-   `File <https://github.com/Justaus3r/Penta/blob/main/docs/index.rst>`__.
+   -now use python setup.py py2exe to build it.
 
-.. figure:: https://github-readme-stats.vercel.app/api?username=Justaus3r
-   :alt: Anurag's github stats
+Pyinstaller: 
+^^^^^^^^^^^^^^^^^^
+- install pyinstaller using ``pip install pyinstaller`` 
+- Now just cd to Project Folder and use ``pyinstaller --icon IconFileIfAny --onefile Penta.py`` 
+- Your project will be built under the dist directory.
 
-   Anurag's github stats
+Currently supported commands:
+^^^^^^^^^^^^^^^^^^^
+☑ Support for changing directories
 
+☑ Support for listing directories
+
+☑ Support for creating files and directories
+
+☑ Support for deleting files and directories
+
+☑ Clears console
+
+☑ Read files
+
+☑ Show system info
+
+☑ Rename files and directories
+
+☑ Move files and directories
+
+☑ Show username
+
+☑ Tracerouting 
+
+☑ Show os version 
+
+☑ Copy files and directories
+
+☑ Change title of console
+
+☑ Print current time and date
+
+☑ Read Markdown Files 
+
+☑ Encrypt Files and folders
+
+☑ Download videos and playlists from youtube 
+
+☑ Tools for Pentesting
+
+☑ Shows all the processes 
+
+☑ Ping
+
+☑ Detect a git initialized directory 
+
+☑ Show network info
+
+☑ List directories as a tree 
+
+☑ Kill processes
+
+☑ Shutdown,reboot and logout
+
+☑ TAB Completion 
+
+☑ Search files.needs a bit of improvement
+
+☑ Change permissions of file
+
+☑ Commands history
+
+☑ Supports Help command
+
+☑ Supports banner(Manual)
+
+☑ Supports custom prompt(Manual)
+
+☑ Download Files from a server 
+
+Bug report
+^^^^^^^^^^
+Found any bug! Report it to me at x-neron@pm.me or open an
+`issue <https://github.com/Justaus3r/Penta/issues>`__ 
+
+Contributions:
+^^^^^^^^^^^^^^
+All contributions are welcomed.fork this repo,improve it and `pull
+requests <https://github.com/Justaus3r/Penta/pulls>`__ 
+License
+^^^^^^^
+Distributed under GPLV3.0
+
+.. |Awesome Badges| image:: https://img.shields.io/badge/badges-awesome-green.svg
+   :target: https://github.com/Justaus3r/Penta
 .. |GPLv3 License| image:: https://img.shields.io/badge/License-GPL%20v3-yellow.svg
    :target: https://opensource.org/licenses/
 .. |Contribution| image:: https://img.shields.io/badge/Contributions-Welcome-<brightgreen>
 .. |Active| image:: http://img.shields.io/badge/Status-Active-green.svg
    :target: https://github.com/Justaus3r
-.. |language| image:: https://badgen.net/badge/Language/Python/cyan
-.. |GitHub commits since| image:: https://img.shields.io/github/commits-since/Justaus3r/Penta/1.0
-   :target: 
+.. |made-with-python| image:: https://img.shields.io/badge/Made%20with-Python-1f425f.svg
+   :target: https://www.python.org/
+.. |semver| image:: https://badgen.net/badge/Semantic-Version/1.3.0/purple
+.. |GitHub commits since| image:: https://img.shields.io/github/commits-since/Justaus3r/Penta/1.0.svg
+   :target: https://github.com/Justaus3r/Penta/commit/
+.. |PRs Welcome| image:: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
+   :target: http://makeapullrequest.com
 .. |Issues| image:: https://img.shields.io/github/issues-raw/Justaus3r/Penta?maxAge=25000
    :target: https://github.com/Justaus3r/Penta/issues
 .. |GitHub Release| image:: https://img.shields.io/github/release/Justaus3r/Penta?style=flat
