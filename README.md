@@ -99,11 +99,11 @@ setup(console=['Penta.py'])
 - install pyinstaller using ```pip install pyinstaller```
 - Now just cd to Project Folder and use ```pyinstaller --icon IconFileIfAny --onefile Penta.py```
 - Your project will be built under the dist directory.
-### Currently Supported:
-- [x] Support for changing directories
-- [x] Support for listing directories
-- [x] Support for creating files and directories
-- [x] Support for deleting files and directories
+### Currently supported commands:
+- [x] changing directories
+- [x] listing directories
+- [x] creating files and directories
+- [x] deleting files and directories
 - [ ] Support for Formatting Drives
 - [x] Clears console
 - [x] Read files
@@ -130,7 +130,7 @@ setup(console=['Penta.py'])
 - [x] TAB Completion 
 - [x] Search files.needs a bit of improvement
 - [x] Change permissions of file
-- [x] commands history
+- [x] Commands history
 - [x] Supports Help command
 - [x] Supports banner(Manual)
 - [x] Supports custom prompt(Manual)
