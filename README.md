@@ -13,9 +13,9 @@
 [![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat)](https://github.com/Justaus3r/Penta/blob/main/docs/CODE_OF_CONDUCT.md) 
 [![Read the Docs](https://readthedocs.org/projects/penta/badge/?version=latest)](https://penta.readthedocs.io/en/latest/?badge=latest)
 [![Open Source](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://opensource.org/)
->> Active Developement paused for time being
+
   
-A cmd ,command prompt ,shell or command interpreter(whatever you say) purely written in python .tries to be more efficient ,functional and easier to use than our classic cmd.
+_A cmd/command prompt/shell/command interpreter(whatever you say) purely written in python_ .tries to be more efficient ,functional and easier to use than our classic cmd.
 Here is a table of commands that Penta supports as of now.i also converted a part of project into Python2(as an experiment),if you want to check that out just see the ```Pent2.py```. 
 
 | Commands:     | Description:                                 | 
@@ -25,9 +25,33 @@ Here is a table of commands that Penta supports as of now.i also converted a par
 |clear,clr,cls  | Clear screen                                 |
 |read,type,cat  | Read Files                                   |
 |sysinfo/systeminfo| Show system info                          |
-|rem            | Remove Files and Folders.use '-f' to remove directories that are unempty.|  
-|ren/rename     |Rename files and directories                  |
-
+|rem  \<filename>| Remove Files and Folders.use '-f' to remove directories that are unempty.|  
+|ren/rename \<oldname> \<newname>| Rename files and directories  |
+|mve/move \<source> \<destination>| Move files and directories   |
+|cpy \<source\> \<destination>| Copy files and directories        |
+|mdir \<dirname> | Make Directories                           |
+|title \<name>   | Change title of window                     |
+|dime           | Print date and time(ik,that command tho,lol) | 
+|username       | Print username                               |
+|ping-host      | Ping host,use '-t' to specify the count.default is 4 requests|
+|configip       | Shows network info                           | 
+|getip          | Show local ip address.use '-p' parameter to get the public ip address.|
+|getmac         | Show Mac address                             |
+|murder <-i>/<-n> \<Pid>/\<Processname>| Kill a process by either its pid(by using -i parameter) or its name(by using -n parameter).|
+|processlist    | Show all the processes                       |
+|shown \<-s>/\<-r>/\<-l> \<-t> time|shutdown,reboot or logout system.use -s to shutdown,-r to reboot,-l to logout,-t to set time-out before shutdown.on windows the timout is in seconds where as in linux its in minutes.|
+|chp <Filename> <permission>|Change File permissions.works partially on windows.use octal values from 0-7.[More info](https://docs.oracle.com/cd/E19455-01/805-7229/6j6q8svd8/index.html).Symbolic permissions(i.e:+x,+r,+w) are also supported.|
+|os ver/ os version|Shows OS information.                      |  
+|search/reveal \<filename>| Search Files and Folder.           |
+|ver/version    | Show Penta's version.                        |
+|help           | Shows this help box.                         |
+|chistory/ch    | Show command history.                        |
+|gtube <-v>/<-p> -q <video quality> <url>| Download videos(-v)/playlists(-p) from youtube using available quality.|
+|gfile \<url> \<Filename>| Download files from a http server.  |
+|troute \<host or url>| traceroute an host.                    |
+|rmd \<Markdown>| Read Markdown with syntax highlight!         |
+|treelist| lists current directory as a tree                   |
+|about|About Penta|  
 ### Download
 |Operating System | Download                                                                                           |                                                               
 | -------------   | ------------                                                                                       |
