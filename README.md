@@ -15,9 +15,18 @@
 [![Open Source](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://opensource.org/)
 >> Active Developement paused for time being
   
-A command interpreter written in python .As of now it supports all the basic commands(or thats what i think) that a shell program should have.i am working on it actively and improvements will be made in future.
+A cmd ,command prompt ,shell or command interpreter(whatever you say) purely written in python .tries to be more efficient ,functional and easier to use than our classic cmd.
 Here is a table of commands that Penta supports as of now.i also converted a part of project into Python2(as an experiment),if you want to check that out just see the ```Pent2.py```. 
-![List of commands-69](https://drive.google.com/uc?export=download&id=1ZfUtJmYf5mmUhKh8CHAfylyl069LWmwn)
+
+| Commands:     | Description:                                 | 
+| ------------- |:-------------:                               | 
+| cd            | Change Directories                           |
+|list           | lists directory Content.use '-p' to list directory content with its permission.|
+|clear,clr,cls  | Clear screen                                 |
+|read,type,cat  | Read Files                                   |
+|sysinfo/systeminfo| Show system info                          |
+|rem            | Remove Files and Folders.use '-f' to remove directories that are unempty.|  
+|ren/rename     |Rename files and directories                  |
 
 ### Download
 |Operating System | Download                                                                                           |                                                               
@@ -150,5 +159,3 @@ Distributed under GPLV3.0
 A General documentation is also available at [readthedocs.io](https://penta.readthedocs.io/en/latest/).Feel free to improve the doc.you can do so by editing this [File](https://github.com/Justaus3r/Penta/blob/main/docs/index.rst).
 
 
-
-![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=Justaus3r)
