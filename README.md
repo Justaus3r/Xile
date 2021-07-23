@@ -145,5 +145,5 @@ All contributions are welcomed.fork this repo,improve it and [pull requests](htt
 ### License:
 Distributed under GPLV3.0
 ### Note:
-Icon used for building Penta can be downloaded from here,also the credit for icon goes to the author.general documentation is also available at [readthedocs.io](https://penta.readthedocs.io/en/latest/).Feel free to improve the doc.you can do so by editing this [File](https://github.com/Justaus3r/Penta/blob/main/docs/index.rst).
+Icon used for building Penta can be downloaded from [here](https://www.flaticon.com/free-icon/command-window_656),also the credit for icon goes to the author.general documentation is also available at [readthedocs.io](https://penta.readthedocs.io/en/latest/).Feel free to improve the doc.you can do so by editing this [File](https://github.com/Justaus3r/Penta/blob/main/docs/index.rst).
 
