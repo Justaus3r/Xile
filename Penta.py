@@ -1018,7 +1018,7 @@ while(True):
             thetable.add_row('create','Create files.\n_________________________________________________________')
             thetable.add_row('ping-host','Ping an Host,use \'-t\' to specify number of echo requests.if none are specified then default number(i.e:4) is used.\n_________________________________________________________')
             thetable.add_row('configip','Shows network information.\n_________________________________________________________')
-            thetable.add_row('getip','Print Local IP address.\n_________________________________________________________')
+            thetable.add_row('getip','Show local ip address.use '-p' parameter to get the public ip address..\n_________________________________________________________')
             thetable.add_row('getmac','Print Mac Address.\n_________________________________________________________')
             thetable.add_row('murder <-i>/<-n> <Pid>/<Processname>','[bold][yellow]Epic name isn\'t it[/yellow][/bold].Use it to kill processes either by its ProcessId(pid,use -i) or Processname(use -n).\n_________________________________________________________')
             thetable.add_row('processlist','Shows all the Processes.\n_________________________________________________________')
