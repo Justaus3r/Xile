@@ -162,7 +162,7 @@ Download
    * - Operating System
      - Download:
    * - Windows
-     - `Penta-linux.zip <https://mega.nz/file/JplklbiI#ON2yVjeH0dnPeNwy5pVf8ZgRXzkAjIxIHvLz9AG3-RE>`_
+     - `Penta-Setup.zip <https://mega.nz/file/481gUD5S#yEr5yZzfTepSVgwppwfBAPzuOxpsqmOnj70YEwSmCy8>`_
    * - Linux
      - `Penta-linux.zip <https://mega.nz/file/JplklbiI#ON2yVjeH0dnPeNwy5pVf8ZgRXzkAjIxIHvLz9AG3-RE>`_
      
