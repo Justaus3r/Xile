@@ -1187,7 +1187,9 @@ while(True):
             except Exception:
                 print(f"[red]Command not found[/red]")    
     except KeyboardInterrupt:
-        print("KeyboardInterrupt")
+        print("KeyboardInterrupt")   
         continue
+    except Exception as ex:
+        print("[red]An Error occured during execution of command.report this error at https://github.com/Justaus3r/Penta/issues [/red]")
 else:
     sys.exit(0)
