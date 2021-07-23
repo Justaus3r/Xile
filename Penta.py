@@ -48,158 +48,165 @@ from prompt_toolkit.history import InMemoryHistory
 from prompt_toolkit.auto_suggest import AutoSuggestFromHistory
 from prompt_toolkit.completion import WordCompleter
 import seedir as sdir #for directory tree view
-######Created an Class for Downloading files,might need it in future########
-class DownloadFile:
-    def __init__(self,url,filename):
-        self.url = url
-        self.filename = filename
 
-    def Download(self):
-        print("[green]Getting Meta Data from the server[/green]")
-        try:
-            metafile = requests.get(self.url, stream=True)
-            print("[green]Server status code:[/green]",metafile.status_code)
-            print("[green]Content Type:[/green]",metafile.headers['content-type'])
-            print("[green]Encoding[/green]",metafile.encoding)        
-            print(f"[purple]Downloading File from {self.url}[/purple]")
-        except:
-            print("An Error Occured while receiving headers")    
-        #create an object that get the data in binary form
-        for i in trange(1):
-            thefile = requests.get(self.url)
-        #write the data as binary
-        with open(self.filename,"wb") as File:
-            File.write(thefile.content)
-            File.close()
-        print("The file has been downloaded")
-########################################################
-
-#define a function to check os
-def check_onichans_os():
-  if os.name == 'nt':
-     Os = 'Win'
-     return Os
-  Os = 'linux'
-  return Os
-#~VERSION AND BUILD DATE-----------------
-_VER = "1.3.2"
-_BULD_DATE = "23-July-2021"
-# Func to check if the current directory is a git directory
-def if_git_dir():
-    if os.path.exists('.git'):
-        return '[git]'
-    else:
-        return ''
-
-#~PROGRAM STARTING/boot DIRECTORY
-_prg_start_dir = os.getcwd()
-
- #######################################################################################################################################
-#check the config file to see if the banner is to printed 
 try:
-    if check_onichans_os() == 'linux':     
-        with open("configs/Bannerconfs/bannerbool","r") as bannerbool:
-         Bool_value = bannerbool.read()
-         bannerbool.close()
-    else:
-         with open("configs\\Bannerconfs\\bannerbool","r") as bannerbool:
+    ######Created an Class for Downloading files,might need it in future########
+    class DownloadFile:
+        def __init__(self,url,filename):
+            self.url = url
+            self.filename = filename
+
+        def Download(self):
+            print("[green]Getting Meta Data from the server[/green]")
+            try:
+                metafile = requests.get(self.url, stream=True)
+                print("[green]Server status code:[/green]",metafile.status_code)
+                print("[green]Content Type:[/green]",metafile.headers['content-type'])
+                print("[green]Encoding[/green]",metafile.encoding)        
+                print(f"[purple]Downloading File from {self.url}[/purple]")
+            except:
+                print("An Error Occured while receiving headers")    
+            #create an object that get the data in binary form
+            for i in trange(1):
+                thefile = requests.get(self.url)
+            #write the data as binary
+            with open(self.filename,"wb") as File:
+                File.write(thefile.content)
+                File.close()
+            print("The file has been downloaded")
+    ########################################################
+
+    #define a function to check os
+    def check_onichans_os():
+      if os.name == 'nt':
+         Os = 'Win'
+         return Os
+      Os = 'linux'
+      return Os
+    #~VERSION AND BUILD DATE-----------------
+    _VER = "1.3.2"
+    _BULD_DATE = "24-July-2021"
+    # Func to check if the current directory is a git directory
+    def if_git_dir():
+        if os.path.exists('.git'):
+            return '[git]'
+        else:
+            return ''
+
+    #~PROGRAM STARTING/boot DIRECTORY
+    _prg_start_dir = os.getcwd()
+
+     #######################################################################################################################################
+    #check the config file to see if the banner is to printed 
+    try:
+        if check_onichans_os() == 'linux':     
+            with open("configs/Bannerconfs/bannerbool","r") as bannerbool:
              Bool_value = bannerbool.read()
              bannerbool.close()
-except OSError as err:
-    print("[red]%s[/red]"%err)         
-#print banner if bool value is 1 otherwise continue
-try:
- if Bool_value == '1':
-     try:
-         if check_onichans_os() == 'linux':
-             with open("configs/Bannerconfs/banner","r") as banner:
-                 Banner = banner.read()
-                 print(Banner)
-                 banner.close()
-         else:
-             with open("configs\\Bannerconfs\\banner","r") as banner:
-                 Banner = banner.read()
-                 print(Banner)
-                 banner.close()                                  
-     except OSError as err:
-         print("[red]%s[/red]"%err)  
-except NameError:
-        print("[red]Configuration file Error[/red]")
-#####################################################################
-    #prompt
-    # check the configuration file to see if custom prompt is to be printed
-    #CHECK OS
-if check_onichans_os() == 'linux':
-    #Try and see if the configuration file(to print custom prompt) exists,if not throw an error and exit
+        else:
+             with open("configs\\Bannerconfs\\bannerbool","r") as bannerbool:
+                 Bool_value = bannerbool.read()
+                 bannerbool.close()
+    except OSError as err:
+        print("[red]%s[/red]"%err)         
+    #print banner if bool value is 1 otherwise continue
     try:
-        with open("configs/prompt/promptconf","r") as promptconf:
-            _read_conf = promptconf.read()
-            promptconf.close() 
-    except FileNotFoundError:
-        print("[red]Configuration file missing![/red]")
-        sys.exit(1)                
-    if _read_conf == '1':
-        #Try and see if the prompt file exist,if not throw an error
+     if Bool_value == '1':
+         try:
+             if check_onichans_os() == 'linux':
+                 with open("configs/Bannerconfs/banner","r") as banner:
+                     Banner = banner.read()
+                     print(Banner)
+                     banner.close()
+             else:
+                 with open("configs\\Bannerconfs\\banner","r") as banner:
+                     Banner = banner.read()
+                     print(Banner)
+                     banner.close()                                  
+         except OSError as err:
+             print("[red]%s[/red]"%err)  
+    except NameError:
+            print("[red]Configuration file Error[/red]")
+    #####################################################################
+        #prompt
+        # check the configuration file to see if custom prompt is to be printed
+        #CHECK OS
+    if check_onichans_os() == 'linux':
+        #Try and see if the configuration file(to print custom prompt) exists,if not throw an error and exit
         try:
-            with open("configs/prompt/prompt","r") as promptfile:
-                __prompt = promptfile.read()
-                __prompt__cwd = False
+            with open("configs/prompt/promptconf","r") as promptconf:
+                _read_conf = promptconf.read()
+                promptconf.close() 
         except FileNotFoundError:
-            print("[red]Prompt file not found![/red]")
-            choice = input("Do you want to create a prompt file[Y/N]:")
-            if choice.upper() == 'Y':
-                prompt = input("Type your custom prompt:")
-                try:
-                    with open("configs/prompt/prompt","w") as make_prompt_file:
-                        make_prompt_file.write(prompt)
-                        make_prompt_file.close()
-                        print("Prompt file created successfully!,Restart the shell to take effect")
-                        sys.exit(0)
-                except OSError as err:
-                    print("[red]%s[/red]"%err)
-            else:
-                print("[red]Please create a prompt file in configs/prompt/ \nor change the configuration file(i.e:configs/prompt/promptconf) from 1 to 0[/red]")
-                sys.exit(1)                    
+            print("[red]Configuration file missing![/red]")
+            sys.exit(1)                
+        if _read_conf == '1':
+            #Try and see if the prompt file exist,if not throw an error
+            try:
+                with open("configs/prompt/prompt","r") as promptfile:
+                    __prompt = promptfile.read()
+                    __prompt__cwd = False
+            except FileNotFoundError:
+                print("[red]Prompt file not found![/red]")
+                choice = input("Do you want to create a prompt file[Y/N]:")
+                if choice.upper() == 'Y':
+                    prompt = input("Type your custom prompt:")
+                    try:
+                        with open("configs/prompt/prompt","w") as make_prompt_file:
+                            make_prompt_file.write(prompt)
+                            make_prompt_file.close()
+                            print("Prompt file created successfully!,Restart the shell to take effect")
+                            sys.exit(0)
+                    except OSError as err:
+                        print("[red]%s[/red]"%err)
+                else:
+                    print("[red]Please create a prompt file in configs/prompt/ \nor change the configuration file(i.e:configs/prompt/promptconf) from 1 to 0[/red]")
+                    sys.exit(1)                    
+        else:
+            __prompt__cwd = True                      
     else:
-        __prompt__cwd = True                      
-else:
-    try:
-        with open("configs\\prompt\\promptconf","r") as promptconf:
-            _read_conf = promptconf.read()
-            promptconf.close() 
-    except FileNotFoundError:
-        print("[red]Configuration file missing![/red]")
-        sys.exit(1)                
-    if _read_conf == '1':
-        #Try and see if the prompt file exist.if the prompt file exists,read data from it and turn the __prompt__cwd bool to false as we dont want to print current directory as prompt.if not throw an error
         try:
-            with open("configs\\prompt\\prompt","r") as promptfile:
-                __prompt = promptfile.read()
-                __prompt__cwd = False
+            with open("configs\\prompt\\promptconf","r") as promptconf:
+                _read_conf = promptconf.read()
+                promptconf.close() 
         except FileNotFoundError:
-            print("[red]Prompt file not found![/red]")
-            choice = input("Do you want to create a prompt file[Y/N]:")
-            if choice.upper() == 'Y':
-                prompt = input("Type your custom prompt:")
-                try:
-                    with open("configs\\prompt\\prompt","w") as make_prompt_file:
-                        make_prompt_file.write(prompt)
-                        make_prompt_file.close()
-                        print("Prompt file created successfully!,Restart the shell to take effect")
-                        sys.exit(0)
-                except OSError as err:
-                    print("[red]%s[/red]"%err)
-            else:
-                print("[red]Please create a prompt file in configs\\prompt\\ \nor change the configuration file(i.e:configs\\prompt\\promptconf) from 1 to 0[/red]")
-                sys.exit(1)                    
-    else:
-        #if the bool is not 1 then turn the bool to true as now we wanna print current directory as prompt
-        __prompt__cwd = True                      
-#####################################################################                  
+            print("[red]Configuration file missing![/red]")
+            sys.exit(1)                
+        if _read_conf == '1':
+            #Try and see if the prompt file exist.if the prompt file exists,read data from it and turn the __prompt__cwd bool to false as we dont want to print current directory as prompt.if not throw an error
+            try:
+                with open("configs\\prompt\\prompt","r") as promptfile:
+                    __prompt = promptfile.read()
+                    __prompt__cwd = False
+            except FileNotFoundError:
+                print("[red]Prompt file not found![/red]")
+                choice = input("Do you want to create a prompt file[Y/N]:")
+                if choice.upper() == 'Y':
+                    prompt = input("Type your custom prompt:")
+                    try:
+                        with open("configs\\prompt\\prompt","w") as make_prompt_file:
+                            make_prompt_file.write(prompt)
+                            make_prompt_file.close()
+                            print("Prompt file created successfully!,Restart the shell to take effect")
+                            sys.exit(0)
+                    except OSError as err:
+                        print("[red]%s[/red]"%err)
+                else:
+                    print("[red]Please create a prompt file in configs\\prompt\\ \nor change the configuration file(i.e:configs\\prompt\\promptconf) from 1 to 0[/red]")
+                    sys.exit(1)                    
+        else:
+            #if the bool is not 1 then turn the bool to true as now we wanna print current directory as prompt
+            __prompt__cwd = True                      
+    #####################################################################                  
+except Exception as ex:
+    print(f"[red]WARNING:An error occured while starting Penta.\nError:{ex}\n\nyou can report it at:https://github.com/Justaus3r/Penta/issues[/red]")
 while(True):    
     try:
         #if the bool(i.e:__prompt__cwd) is true then set prompt to current directory
-        if __prompt__cwd is True:
+        try:
+            if __prompt__cwd is True:
+                __prompt = os.getcwd()
+        except Exception:
             __prompt = os.getcwd()
         #getting cuurent directory list
         list_of_dir = os.listdir()
