@@ -134,45 +134,7 @@ setup(console=['Penta.py'])
 - install pyinstaller using ```pip install pyinstaller```
 - Now just cd to Project Folder and use ```pyinstaller --icon IconFileIfAny --onefile Penta.py```
 - Your project will be built under the dist directory.
-### Currently supported commands:
-- [x] changing directories
-- [x] listing directories
-- [x] creating files and directories
-- [x] deleting files and directories
-- [ ] Support for Formatting Drives
-- [x] Clears console
-- [x] Read files
-- [x] Show system info
-- [x] Rename files and directories
-- [x] Move files and directories
-- [x] Show username
-- [x] Tracerouting 
-- [x] Show os version 
-- [x] Copy files and directories
-- [x] Change title of console
-- [x] Print current time and date
-- [x] Read Markdown Files 
-- [ ] Encrypt Files and folders
-- [x] Download videos and playlists from youtube 
-- [ ] Tools for Pentesting
-- [x] Shows all the processes 
-- [x] Ping
-- [X] Detect a git initialized directory 
-- [x] Show network info
-- [x] List directories as a tree 
-- [x] Kill processes
-- [x] Shutdown,reboot and logout
-- [x] TAB Completion 
-- [x] Search files.needs a bit of improvement
-- [x] Change permissions of file
-- [x] Commands history
-- [x] Supports Help command
-- [x] Supports banner(Manual)
-- [x] Supports custom prompt(Manual)
-- [x] Download Files from a server 
-- [ ] Much more...
-# 🔴 Note: 🔴
-Please do not confuse with the word "pure python" as some core operations such as shutting down pc ,etc require interaction with OS API(or thats what i think after my research),and low level languages are used to do so.python is a high level language and i think it can't interact with Os like C and other ll languages do.so i have used system commands to do such things.**if you think i am wrong**,Please do correct me 🙂..
+
 ### Bug report
 Found any bug!
 Report it to me at x-neron@pm.me
