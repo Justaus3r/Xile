@@ -705,16 +705,19 @@ while(True):
             print(f"[green]Version:{version}[/green]")
         elif command.lower() == 'getmac':
             print("MAC Address",getmac.get_mac_address())
-        elif command.split()[0] == "getip" and int(len(command)) == 5:
-            print("Local Ip address:",socket.gethostbyname(socket.gethostname()))
-        try:
-          elif command.split()[0] == "getip" and command.split()[1] == "-p":
-              try:
-                  print(f"Public Ip address:{requests.get('https://api.ipify.org').text}")
-              except Exception:
-                  print("[red]Error:couldn't connect to the server.\ncheck your internet connection[/red]") 
-        except Exception:
-            print("Local Ip address:",socket.gethostbyname(socket.gethostname()))
+        elif command.split()[0] == "getip":
+            try:
+                _argument_ = command.split()[1]
+            except Exception:
+                print("Local Ip address:",socket.gethostbyname(socket.gethostname()))   
+                continue 
+            if command.split()[0] == "getip" and int(len(command)) == 5:
+                print("Local Ip address:",socket.gethostbyname(socket.gethostname()))
+            elif command.split()[0] == "getip" and int(len(command)) > 5 and _argument_ == "-p":
+                try:
+                    print(f"Public Ip address:{requests.get('https://api.ipify.org').text}")
+                except Exception:
+                    print("[red]Error:couldn't connect to the server.\ncheck your internet connection[/red]") 
         elif command[:6] == 'murder':
             #kill process through name or pids
             try:
