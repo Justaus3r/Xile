@@ -160,14 +160,12 @@ Download
    :header-rows: 1
 
    * - Operating System
-     - Download
+     - Download:
    * - Windows
-     - `Pentasetup.zip <https://mega.nz/file/481gUD5S#yEr5yZzfTepSVgwppwfBAPzuOxpsqmOnj70YEwSmCy8>`_
-     - 
+     - `Penta-linux.zip <https://mega.nz/file/JplklbiI#ON2yVjeH0dnPeNwy5pVf8ZgRXzkAjIxIHvLz9AG3-RE>`_
    * - Linux
      - `Penta-linux.zip <https://mega.nz/file/JplklbiI#ON2yVjeH0dnPeNwy5pVf8ZgRXzkAjIxIHvLz9AG3-RE>`_
-
-
+     
 Changelog(Versionwise)
 ^^^^^^^^^^^^^^^^^^^^^^
 
