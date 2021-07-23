@@ -76,7 +76,7 @@ Here is a table of commands that Penta supports as of now.i also converted a par
 |05-Apr-2021    | Tab Completion for both Windows and Linux and shows all the processes   |
 |30-Apr-2021    | Read Markdown and list directories as a tree                            |
 |22-May-2021    | Can detect a git initialized Directory                                  |
-|23-July-2021   | Fix some system commands not working and other bugs                     |
+|23-July-2021   | Fix some system commands not working and other bugs and can now show pulic ip addresses|
 
 #### Upcoming update
 --?
