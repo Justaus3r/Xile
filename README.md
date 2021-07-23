@@ -18,7 +18,8 @@
 _A cmd/command prompt/shell/command interpreter(whatever you say) purely written in python_ .tries to be more efficient ,functional and easier to use than our classic cmd.
 Here is a table of commands that Penta supports as of now.i also converted a part of project into Python2(as an experiment),if you want to check that out just see the ```Pent2.py```. 
 
-**Note: Please note that commands that have additional argumnents such as ```cd <directory>``` are index sensitive.i.e ```cd MyDirectory``` and ```cd  MyDirectory```(with extra space) are interpreted differently.** 
+#### Note:
+**Please note that commands that have additional argumnents such as ```cd <directory>``` are index sensitive.i.e ```cd MyDirectory``` and ```cd  MyDirectory```(with extra space) are interpreted differently.also all the system commands are also supported** 
 
 | Commands:     | Description:                                 | 
 | ------------- |:-------------:                               | 
