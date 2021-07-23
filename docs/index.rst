@@ -1,3 +1,6 @@
+Readme.md 👋
+~~~~~~~~~~~
+
 Penta
 -----
 
@@ -6,120 +9,130 @@ Penta
 |Issues| |GitHub Release| |Code of Conduct| |Read the Docs| |Open
 Source|
 
+*A cmd/command prompt/shell/command interpreter(whatever you say) purely
+written in python* .tries to be more efficient ,functional and easier to
+use than our classic cmd. Here is a table of commands that Penta
+supports as of now.i also converted a part of project into Python2(as an
+experiment),if you want to check that out just see the ``Pent2.py``.
 
-Penta is a pure python command interpreter that i have created to
-improve my python.As of now it supports all the basic commands(or thats
-what i think) that a shell program should have.i am working on it
-actively and improvements will be made in future. Here is a table of
-commands that Penta supports as of now.i also converted a part of
-project into Python2(as an experiment),if you want to check that out
-just see the ``Pent2.py``.
+Note:
+^^^^^
 
-|List of commands-69|
+**Please note that commands that have additional argumnents such as
+``cd <directory>`` are index sensitive.i.e ``cd MyDirectory`` and
+``cd  MyDirectory``\ (with extra space) are interpreted differently.also
+all the system commands are also supported**
 
-Download
-~~~~~~~~
-+--------------------+---------------------------------------------------------------------------------------------------+
-| Operating System   | Download                                                                                          |
-+====================+===================================================================================================+
-| Windows            | `Pentasetup.zip <https://mega.nz/file/481gUD5S#yEr5yZzfTepSVgwppwfBAPzuOxpsqmOnj70YEwSmCy8>`__    |
-+--------------------+---------------------------------------------------------------------------------------------------+
-| Linux              | `Penta-linux.zip <https://mega.nz/file/JplklbiI#ON2yVjeH0dnPeNwy5pVf8ZgRXzkAjIxIHvLz9AG3-RE>`__   |
-+--------------------+---------------------------------------------------------------------------------------------------+
+\| Commands: \| Description: \| \| ------------- \|:-------------: \| \|
+cd \| Change Directories \| \|list \| lists directory Content.use '-p'
+to list directory content with its permission.\| \|clear,clr,cls \|
+Clear screen \| \|read,type,cat \| Read Files \| \|sysinfo/systeminfo\|
+Show system info \| \|rem <filename>\| Remove Files and Folders.use '-f'
+to remove directories that are unempty.\|
+\|ren/rename <oldname> <newname>\| Rename files and directories \|
+\|mve/move <source> <destination>\| Move files and directories \| \|cpy
+<source> <destination>\| Copy files and directories \| \|mdir <dirname>
+\| Make Directories \| \|title <name> \| Change title of window \|
+\|dime \| Print date and time(ik,that command tho,lol) \| \|username \|
+Print username \| \|ping-host \| Ping host,use '-t' to specify the
+count.default is 4 requests\| \|configip \| Shows network info \|
+\|getip \| Show local ip address.use '-p' parameter to get the public ip
+address.\| \|getmac \| Show Mac address \| \|murder <-i>/<-n>
+<Pid>/<Processname>\| Kill a process by either its pid(by using -i
+parameter) or its name(by using -n parameter).\| \|processlist \| Show
+all the processes \| \|shown <-s>/<-r>/<-l> <-t> time\|shutdown,reboot
+or logout system.use -s to shutdown,-r to reboot,-l to logout,-t to set
+time-out before shutdown.on windows the timout is in seconds where as in
+linux its in minutes.\| \|chp \|Change File permissions.works partially
+on windows.use octal values from 0-7.\ `More
+info <https://docs.oracle.com/cd/E19455-01/805-7229/6j6q8svd8/index.html>`__.Symbolic
+permissions(i.e:+x,+r,+w) are also supported.\| \|os ver/ os
+version\|Shows OS information. \|
+\|search/reveal <filename>\| Search Files and Folder. \| \|ver/version
+\| Show Penta's version. \| \|help \| Shows this help box. \|
+\|chistory/ch \| Show command history. \| \|gtube <-v>/<-p> -q
+
+.. raw:: html
+
+   <video quality> 
+
+| \| Download videos(-v)/playlists(-p) from youtube using available
+quality.\| \|gfile <url> <Filename>\| Download files from a http server.
+\| \|troute <host or url>\| traceroute an host. \| \|rmd <Markdown>\|
+Read Markdown with syntax highlight! \| \|treelist\| lists current
+directory as a tree \| \|about\|About Penta\|
+| ### Download \|Operating System \| Download \|
+| \| ------------- \| ------------ \| \| Windows \|
+`Pentasetup.zip <https://mega.nz/file/481gUD5S#yEr5yZzfTepSVgwppwfBAPzuOxpsqmOnj70YEwSmCy8>`__\ \|\|
+\| Linux \|
+`Penta-linux.zip <https://mega.nz/file/JplklbiI#ON2yVjeH0dnPeNwy5pVf8ZgRXzkAjIxIHvLz9AG3-RE>`__
 
 Changelog(Versionwise)
-^^^^^^^^^^^^^^^^^^^^^^
-+---------------+---------------------------------+
-| Date:         | Comment:                        |
-+===============+=================================+
-| 23-Mar-2021   | Initial Release(Beta version)   |
-+---------------+---------------------------------+
-| 30-May-2021   | Release 1.3.0                   |
-+---------------+---------------------------------+
+~~~~~~~~~~~~~~~~~~~~~~
 
-Changelog(Commitwise)
-^^^^^^^^^^^^^^^^^^^^^
-
-+---------------+-------------------------------------------------------------------------+
-| Date:         | Comment:                                                                |
-+===============+=========================================================================+
-| 23-Mar-2021   | Initial Release(Beta version)                                           |
-+---------------+-------------------------------------------------------------------------+
-| 28-Mar-2021   | Bug fix for windows and switched to nuitka for python compilation       |
-+---------------+-------------------------------------------------------------------------+
-| 01-Apr-2021   | Fixed Typos and added ping and traceroute support for Windows           |
-+---------------+-------------------------------------------------------------------------+
-| 04-Apr-2021   | Can now download files from a server                                    |
-+---------------+-------------------------------------------------------------------------+
-| 05-Apr-2021   | Tab Completion for both Windows and Linux and shows all the processes   |
-+---------------+-------------------------------------------------------------------------+
-| 30-Apr-2021   | Read Markdown and list directories as a tree                            |
-+---------------+-------------------------------------------------------------------------+
-| 22-May-2021   | Can detect a git initialized Directory                                  |
-+---------------+-------------------------------------------------------------------------+
-
-
+\| Date: \| Comment: \| \| ------------- \|:-------------: \|
+\|23-Mar-2021 \| Initial Release(Beta version) \| \|30-May-2021 \|
+Release 1.3.0 \| ### CommitTable \| Date: \| Comment: \| \|
+------------- \|:-------------: \| \|23-Mar-2021 \| Initial Release(Beta
+version) \| \|28-Mar-2021 \| Bug fix for windows and switched to nuitka
+for python compilation \| \|01-Apr-2021 \| Fixed Typos and added ping
+and traceroute support for Windows \| \|04-Apr-2021 \| Can now download
+files from a server \| \|05-Apr-2021 \| Tab Completion for both Windows
+and Linux and shows all the processes \| \|30-Apr-2021 \| Read Markdown
+and list directories as a tree \| \|22-May-2021 \| Can detect a git
+initialized Directory \| \|23-July-2021 \| Fix some system commands not
+working and other bugs and can now show pulic ip addresses\|
 
 Upcoming update
 ^^^^^^^^^^^^^^^
 
---? 
+--? ### Windows installation **Penta will only run on windows 10.**
 
-Windows installation 
-^^^^^^^^^^^^^^^^^^^^
-
-**Penta will only run on windows 10.**
-
-- Download the setup from link above and execute it.after installing the setup,be sure to add the directory (present in installation Directory) named **bin** to PATH
-
-Linux installation 
-^^^^^^^^^^^^^^^^^^^^
-**if you are using bash instead of zsh,then edit Setup.sh and replace ``.zshrc`` with ``.bashrc``** 
-
-Download the zip file from link above and follow following steps
-
-- Unzip and file and cd to the directory.
-- Open terminal here and type ``chmod +x Setup.sh `` to give executable permission to script.
-- Run the script i.e ./Setup.sh
-- Restart the terminal after installing the setup
-- Type ``penta`` and Have Fun 🥳...
-
-Manual Installation(if the script doesn't work):
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-- Unzip the file and copy\move the ``bin`` ,``configs`` folder and executable named Penta to home directory
-- Give executable permission to Penta.sh and copy\move it to /bin folder(linux bin folder and be sure that its on $PATH)
-- (Optional)Now edit your ``.bashrc`` file and add a alias at the end of it: ``alias penta=Penta.sh``
+Download the setup from link above and execute it.after installing the
+setup,be sure to add the directory (present in installation Directory)
+named **bin** to
+`PATH <https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/>`__.
+### Linux installation: **if you are using bash instead of zsh,then edit
+Setup.sh and replace ``.zshrc`` with ``.bashrc``** Download the zip file
+from link above and follow following steps - Unzip and file and cd to
+the directory. - Open terminal here and type ``chmod +x Setup.sh`` to
+give executable permission to script. - Run the script i.e ./Setup.sh -
+Restart the terminal after installing the setup - Type ``penta`` and
+Have Fun 🥳... #### Manual Installation(if the script doesn't work): -
+Unzip the file and copythe ``bin`` ,\ ``configs`` folder and executable
+named Penta to home directory - Give executable permission to Penta.sh
+and copyit to /bin folder(linux bin folder and be sure that its on
+$PATH) - (Optional)Now edit your ``.bashrc`` file and add a alias at the
+end of it: ``alias penta=Penta.sh``
 
 **NOTE** Please be sure that your /bin directory is on $PATH.
 
 Uninstallation:
-^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~
 
 Uninstallation in windows is pretty straightforward ,you just uninstall
 it like other softwares but there is no uninstalller for linux.delete
 Penta.sh from /bin folder,edit ``.bashrc`` file and remove the alias if
 any. and also remove the folder named ``bin``,\ ``configs`` and Penta
-from home directory.
-
-Build from source
-~~~~~~~~~~~~~~~~~
-Windows/Linux:
-^^^^^^^^^^^^^^
-
-Penta can be built from pyinstaller,py2exe and Nuitka.
+from home directory. ## Build from source ### Windows/Linux: Penta can
+be built from pyinstaller,py2exe and Nuitka.
 `Icon <https://www.flaticon.com/free-icon/command-window_656>`__ used in
 Building Penta.
 
-Nuitka(Recommended): 
-^^^^^^^^^^^^^^^^^^
-- First install nuitka using ``pip install Nuitka``. - Now open cmd in same Folder as the Project Folder and Type ``python3 -m nuitka --plugin-enable=tk-inter --windows-icon-from-ico=IconFileIfAnyIfNotThenSkipThisFlag --standalone Penta.py``\ (for linux remove the windows related flags).
-- For the First time it's going to take some time depending on your network speed as nuitka installs a gcc compiler,for all the messages press Y. 
-- Your Executable will be compiled in Penta.dist.All the files in the dist folder are necessary to run Penta.if you want to make a single file executable then you can use the --onefile flag but i wouldn't recommend it.
+**`Nuitka(Recommended) <https://nuitka.net/>`__**\ (`User
+manual <https://nuitka.net/doc/user-manual.html>`__): - First install
+nuitka using ``pip install Nuitka``. - Now open cmd in same Folder as
+the Project Folder and Type
+``python3 -m nuitka --plugin-enable=tk-inter --windows-icon-from-ico=IconFileIfAnyIfNotThenSkipThisFlag --standalone Penta.py``\ (for
+linux remove the windows related flags) - For the First time it's going
+to take some time depending on your network speed as nuitka installs a
+gcc compiler,for all the messages press Y. - Your Executable will be
+compiled in Penta.dist.All the files in the dist folder are necessary to
+run Penta.if you want to make a single file executable then you can use
+the --onefile flag but i wouldn't recommend it.
 
-Py2exe: 
-^^^^^^
-- First install py2exe using ``pip install py2exe``.
-- Now Create a file named setup.py or whatever.
+**`Py2exe <https://www.py2exe.org/>`__**: - First install py2exe using
+``pip install py2exe``. - Now Create a file named setup.py or whatever.
 - if you want to add icon *then*:
 
 ::
@@ -139,94 +152,23 @@ Py2exe:
 
    -now use python setup.py py2exe to build it.
 
-Pyinstaller: 
-^^^^^^^^^^^^^^^^^^
-- install pyinstaller using ``pip install pyinstaller`` 
-- Now just cd to Project Folder and use ``pyinstaller --icon IconFileIfAny --onefile Penta.py`` 
-- Your project will be built under the dist directory.
-
-Currently supported commands:
-^^^^^^^^^^^^^^^^^^^
-☑ Support for changing directories
-
-☑ Support for listing directories
-
-☑ Support for creating files and directories
-
-☑ Support for deleting files and directories
-
-☑ Clears console
-
-☑ Read files
-
-☑ Show system info
-
-☑ Rename files and directories
-
-☑ Move files and directories
-
-☑ Show username
-
-☑ Tracerouting 
-
-☑ Show os version 
-
-☑ Copy files and directories
-
-☑ Change title of console
-
-☑ Print current time and date
-
-☑ Read Markdown Files 
-
-☑ Encrypt Files and folders
-
-☑ Download videos and playlists from youtube 
-
-☑ Tools for Pentesting
-
-☑ Shows all the processes 
-
-☑ Ping
-
-☑ Detect a git initialized directory 
-
-☑ Show network info
-
-☑ List directories as a tree 
-
-☑ Kill processes
-
-☑ Shutdown,reboot and logout
-
-☑ TAB Completion 
-
-☑ Search files.needs a bit of improvement
-
-☑ Change permissions of file
-
-☑ Commands history
-
-☑ Supports Help command
-
-☑ Supports banner(Manual)
-
-☑ Supports custom prompt(Manual)
-
-☑ Download Files from a server 
+**`Pyinstaller <https://www.pyinstaller.org/>`__** - install pyinstaller
+using ``pip install pyinstaller`` - Now just cd to Project Folder and
+use ``pyinstaller --icon IconFileIfAny --onefile Penta.py`` - Your
+project will be built under the dist directory.
 
 Bug report
-^^^^^^^^^^
-Found any bug! Report it to me at x-neron@pm.me or open an
-`issue <https://github.com/Justaus3r/Penta/issues>`__ 
+~~~~~~~~~~
 
-Contributions:
-^^^^^^^^^^^^^^
+Found any bug! Report it to me at x-neron@pm.me or open an
+`issue <https://github.com/Justaus3r/Penta/issues>`__ ### Contributions:
 All contributions are welcomed.fork this repo,improve it and `pull
-requests <https://github.com/Justaus3r/Penta/pulls>`__ 
-License
-^^^^^^^
-Distributed under GPLV3.0
+requests <https://github.com/Justaus3r/Penta/pulls>`__ ### License
+Distributed under GPLV3.0 ### Note: A General documentation is also
+available at
+`readthedocs.io <https://penta.readthedocs.io/en/latest/>`__.Feel free
+to improve the doc.you can do so by editing this
+`File <https://github.com/Justaus3r/Penta/blob/main/docs/index.rst>`__.
 
 .. |Awesome Badges| image:: https://img.shields.io/badge/badges-awesome-green.svg
    :target: https://github.com/Justaus3r/Penta
@@ -237,7 +179,7 @@ Distributed under GPLV3.0
    :target: https://github.com/Justaus3r
 .. |made-with-python| image:: https://img.shields.io/badge/Made%20with-Python-1f425f.svg
    :target: https://www.python.org/
-.. |semver| image:: https://badgen.net/badge/Semantic-Version/1.3.0/purple
+.. |semver| image:: https://badgen.net/badge/Semantic-Version/1.3.1/purple
 .. |GitHub commits since| image:: https://img.shields.io/github/commits-since/Justaus3r/Penta/1.0.svg
    :target: https://github.com/Justaus3r/Penta/commit/
 .. |PRs Welcome| image:: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
@@ -250,6 +192,5 @@ Distributed under GPLV3.0
    :target: https://github.com/Justaus3r/Penta/blob/main/docs/CODE_OF_CONDUCT.md
 .. |Read the Docs| image:: https://readthedocs.org/projects/penta/badge/?version=latest
    :target: https://penta.readthedocs.io/en/latest/?badge=latest
-.. |Open Source| image:: https://badges.frapsoft.com/os/v1/open-source.svg?v=103
+.. |Open Source| image:: https://badges.frapsoft.com/os/v3/open-source.svg?v=103
    :target: https://opensource.org/
-.. |List of commands-69| image:: https://drive.google.com/uc?export=download&id=1ZfUtJmYf5mmUhKh8CHAfylyl069LWmwn
