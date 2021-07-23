@@ -15,8 +15,8 @@
 [![Open Source](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://opensource.org/)
 
   
-_A cmd/command prompt/shell/command interpreter(whatever you say) purely written in python_ .tries to be more efficient ,functional and easier to use than our classic cmd.
-Here is a table of commands that Penta supports as of now.i also converted a part of project into Python2(as an experiment),if you want to check that out just see the ```Pent2.py```. 
+_A cmd/command prompt/shell/command interpreter(whatever you say) purely written in python_ .tries to be more efficient ,functional and easier to use than our classic cmd.it's cross-platform meaning it can run on Windows,Mac and Linux.i also converted a part of project into Python2(as an experiment),if you want to check that out just see the ```Pent2.py```. 
+Here is a table of commands that Penta supports as of now.
 
 #### Note:
 **Please note that commands that have additional argumnents such as ```cd <directory>``` are index sensitive.i.e ```cd MyDirectory``` and ```cd  MyDirectory```(with extra space) are interpreted differently.also all the system commands are also supported** 
@@ -142,9 +142,8 @@ Report it to me at x-neron@pm.me
 or open an [issue](https://github.com/Justaus3r/Penta/issues)
 ### Contributions:
 All contributions are welcomed.fork this repo,improve it and [pull requests](https://github.com/Justaus3r/Penta/pulls)
-### License
+### License:
 Distributed under GPLV3.0
 ### Note:
-A General documentation is also available at [readthedocs.io](https://penta.readthedocs.io/en/latest/).Feel free to improve the doc.you can do so by editing this [File](https://github.com/Justaus3r/Penta/blob/main/docs/index.rst).
-
+Icon used for building Penta can be downloaded from here,also the credit for icon goes to the author.general documentation is also available at [readthedocs.io](https://penta.readthedocs.io/en/latest/).Feel free to improve the doc.you can do so by editing this [File](https://github.com/Justaus3r/Penta/blob/main/docs/index.rst).
 
