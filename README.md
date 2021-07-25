@@ -15,7 +15,7 @@
 [![Open Source](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://opensource.org/)
 
   
-_A cmd/command prompt/shell/command interpreter(whatever you say) purely written in python_ .it tries to be more efficient ,functional and easier to use than our classic cmd.it's cross-platform meaning it can run on Windows,Mac and Linux.i also converted a part of project into Python2(as an experiment),if you want to check that out just see the ```Pent2.py```. 
+_A command interpreter purely written in python_ .it tries to be more efficient ,functional and easier to use than our classic cmd.it's cross-platform meaning it can run on Windows,Mac and Linux.i also converted a part of project into Python2(as an experiment),if you want to check that out just see the ```Pent2.py```. 
 Here is a table of commands that Penta supports as of now.
 
 #### Note:
