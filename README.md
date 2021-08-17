@@ -62,7 +62,7 @@ Here is a table of commands that Penta supports as of now.
 | Linux           | [Penta-linux.zip](https://mega.nz/file/JplklbiI#ON2yVjeH0dnPeNwy5pVf8ZgRXzkAjIxIHvLz9AG3-RE)
 
 
-### Changelog(Versionwise)
+### Changelog:
 | Date:         | Comment:                                     | 
 | ------------- |:-------------:                               | 
 |23-Mar-2021    | Initial Release(Beta version)                |
