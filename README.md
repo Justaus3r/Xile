@@ -67,6 +67,9 @@ Here is a table of commands that Penta supports as of now.
 | ------------- |:-------------:                               | 
 |23-Mar-2021    | Initial Release(Beta version)                |
 |30-May-2021    | Release 1.3.0                                |
+|23-Jul-2021    | Release 1.3.1                                |
+|24-Jul-2021    | Release 1.3.2                                |
+  
 ### CommitTable
 | Date:         | Comment:                                                                | 
 | ------------- |:-------------:                                                          | 
@@ -78,7 +81,7 @@ Here is a table of commands that Penta supports as of now.
 |30-Apr-2021    | Read Markdown and list directories as a tree                            |
 |22-May-2021    | Can detect a git initialized Directory                                  |
 |23-July-2021   | Fix some system commands not working and other bugs and can now show pulic ip addresses|
-|4-Sep-2021     | Git initialized dirs now also show their branch
+|4-Sep-2021     | Git initialized dirs now also show their branch                         |
 
 #### Upcoming update
 --?
