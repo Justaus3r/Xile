@@ -84,12 +84,13 @@ try:
       Os = 'linux'
       return Os
     #~VERSION AND BUILD DATE-----------------
-    _VER = "1.3.2"
+    _VER = "1.3.3"
     _BULD_DATE = "24-July-2021"
     # Func to check if the current directory is a git directory
     def if_git_dir():
         if os.path.exists('.git'):
-            return '[git]'
+            git_branch = os.listdir(f".git{os.sep}logs{os.sep}refs{os.sep}heads")[0]
+            return f'[git on {git_branch}]'
         else:
             return ''
 
