@@ -82,6 +82,7 @@ Here is a table of commands that Penta supports as of now.
 |22-May-2021    | Can detect a git initialized Directory                                  |
 |23-July-2021   | Fix some system commands not working and other bugs and can now show pulic ip addresses|
 |4-Sep-2021     | Git initialized dirs now also show their branch                         |
+|5-Sep-2021     | Add autosugesstion,history recall,Fix bugs and typos                    |
 
 #### Upcoming update
 --?
