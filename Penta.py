@@ -20,7 +20,7 @@ Distributed under GPLV3
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 import os #for os thingis
-from rich import print #for print beauty like pico sama
+from rich import print #for beauty like pico sama
 from rich.markdown import Markdown #for printing mardown
 from clear_screen import clear #to clear screen
 import sys #for system thingis
@@ -36,6 +36,7 @@ import ctypes #for windows to play with.used to change title
 from distutils.dir_util import copy_tree #for copying dirs 
 from datetime import datetime #date and time
 import signal # forgot
+from getpass import getuser
 from tkinter import * # for some gui
 from rich.console import Console # for importing console
 from rich.table import Table #for tables
@@ -44,7 +45,7 @@ import requests # for downloading files from server
 from tqdm import trange #for progress bar
 #from now on usin prompt_toolkit for userinput
 from prompt_toolkit import PromptSession
-from prompt_toolkit.history import InMemoryHistory
+from prompt_toolkit.history import FileHistory
 from prompt_toolkit.auto_suggest import AutoSuggestFromHistory
 from prompt_toolkit.completion import WordCompleter
 import seedir as sdir #for directory tree view
@@ -83,9 +84,11 @@ try:
          return Os
       Os = 'linux'
       return Os
+
     #~VERSION AND BUILD DATE-----------------
     _VER = "1.3.3"
     _BULD_DATE = "4-September-2021"
+    
     # Func to check if the current directory is a git directory
     def if_git_dir():
         if os.path.exists('.git'):
@@ -100,105 +103,64 @@ try:
      #######################################################################################################################################
     #check the config file to see if the banner is to printed 
     try:
-        if check_onichans_os() == 'linux':     
-            with open("configs/Bannerconfs/bannerbool","r") as bannerbool:
-             Bool_value = bannerbool.read()
-             bannerbool.close()
-        else:
-             with open("configs\\Bannerconfs\\bannerbool","r") as bannerbool:
-                 Bool_value = bannerbool.read()
-                 bannerbool.close()
-    except OSError as err:
-        print("[red]%s[/red]"%err)         
+        with open(f"configs{os.sep}Bannerconfs{os.sep}bannerbool","r") as bannerbool:
+            Bool_value = bannerbool.read()       
     #print banner if bool value is 1 otherwise continue
-    try:
-     if Bool_value == '1':
-         try:
-             if check_onichans_os() == 'linux':
-                 with open("configs/Bannerconfs/banner","r") as banner:
-                     Banner = banner.read()
-                     print(Banner)
-                     banner.close()
-             else:
-                 with open("configs\\Bannerconfs\\banner","r") as banner:
-                     Banner = banner.read()
-                     print(Banner)
-                     banner.close()                                  
-         except OSError as err:
-             print("[red]%s[/red]"%err)  
+        if Bool_value == '1':
+            try:
+                with open(f"configs{os.sep}Bannerconfs{os.sep}banner","r") as banner:
+                    Banner = banner.read()
+                    print(Banner)                                  
+            except OSError as err:
+                print("[red]%s[/red]"%err)
+    except OSError as err:
+        print("[red]%s[/red]"%err)  
     except NameError:
-            print("[red]Configuration file Error[/red]")
+        print("[red]Configuration file Error[/red]")
     #####################################################################
         #prompt
         # check the configuration file to see if custom prompt is to be printed
-        #CHECK OS
-    if check_onichans_os() == 'linux':
-        #Try and see if the configuration file(to print custom prompt) exists,if not throw an error and exit
+    try:
+        with open(f"configs{os.sep}prompt{os.sep}promptconf","r") as promptconf:
+            _read_conf = promptconf.read()
+    except FileNotFoundError:
+        print("[red]Configuration file missing![/red]")
+        sys.exit(1)                
+    if _read_conf == '1':
+        #Try and see if the prompt file exist,if not throw an error
         try:
-            with open("configs/prompt/promptconf","r") as promptconf:
-                _read_conf = promptconf.read()
-                promptconf.close() 
+            with open(f"configs{os.sep}prompt{os.sep}prompt","r") as promptfile:
+                __prompt = promptfile.read()
+                __prompt__cwd = False
         except FileNotFoundError:
-            print("[red]Configuration file missing![/red]")
-            sys.exit(1)                
-        if _read_conf == '1':
-            #Try and see if the prompt file exist,if not throw an error
-            try:
-                with open("configs/prompt/prompt","r") as promptfile:
-                    __prompt = promptfile.read()
-                    __prompt__cwd = False
-            except FileNotFoundError:
-                print("[red]Prompt file not found![/red]")
-                choice = input("Do you want to create a prompt file[Y/N]:")
-                if choice.upper() == 'Y':
-                    prompt = input("Type your custom prompt:")
-                    try:
-                        with open("configs/prompt/prompt","w") as make_prompt_file:
-                            make_prompt_file.write(prompt)
-                            make_prompt_file.close()
-                            print("Prompt file created successfully!,Restart the shell to take effect")
-                            sys.exit(0)
-                    except OSError as err:
-                        print("[red]%s[/red]"%err)
-                else:
-                    print("[red]Please create a prompt file in configs/prompt/ \nor change the configuration file(i.e:configs/prompt/promptconf) from 1 to 0[/red]")
-                    sys.exit(1)                    
-        else:
-            __prompt__cwd = True                      
+            print("[red]Prompt file not found![/red]")
+            choice = input("Do you want to create a prompt file[Y/N]:")
+            if choice.upper() == 'Y':
+                prompt = input("Type your custom prompt:")
+                try:
+                    with open(f"configs{os.sep}prompt{os.sep}prompt","w") as make_prompt_file:
+                        make_prompt_file.write(prompt)
+                        print("Prompt file created successfully!,Restart the shell to take effect")
+                        sys.exit(0)
+                except OSError as err:
+                    print("[red]%s[/red]"%err)
+            else:
+                print("[red]Please create a prompt file in configs/prompt/ \nor change the configuration file(i.e:configs/prompt/promptconf) from 1 to 0[/red]")
+                sys.exit(1)                    
     else:
-        try:
-            with open("configs\\prompt\\promptconf","r") as promptconf:
-                _read_conf = promptconf.read()
-                promptconf.close() 
-        except FileNotFoundError:
-            print("[red]Configuration file missing![/red]")
-            sys.exit(1)                
-        if _read_conf == '1':
-            #Try and see if the prompt file exist.if the prompt file exists,read data from it and turn the __prompt__cwd bool to false as we dont want to print current directory as prompt.if not throw an error
-            try:
-                with open("configs\\prompt\\prompt","r") as promptfile:
-                    __prompt = promptfile.read()
-                    __prompt__cwd = False
-            except FileNotFoundError:
-                print("[red]Prompt file not found![/red]")
-                choice = input("Do you want to create a prompt file[Y/N]:")
-                if choice.upper() == 'Y':
-                    prompt = input("Type your custom prompt:")
-                    try:
-                        with open("configs\\prompt\\prompt","w") as make_prompt_file:
-                            make_prompt_file.write(prompt)
-                            make_prompt_file.close()
-                            print("Prompt file created successfully!,Restart the shell to take effect")
-                            sys.exit(0)
-                    except OSError as err:
-                        print("[red]%s[/red]"%err)
-                else:
-                    print("[red]Please create a prompt file in configs\\prompt\\ \nor change the configuration file(i.e:configs\\prompt\\promptconf) from 1 to 0[/red]")
-                    sys.exit(1)                    
-        else:
-            #if the bool is not 1 then turn the bool to true as now we wanna print current directory as prompt
-            __prompt__cwd = True                      
-    #####################################################################                  
+            __prompt__cwd = True
+
+    #Getting username and System command error supression
+    USERNAME = getuser()
+    #Setting history directory for windows and linux
+    if check_onichans_os() == 'linux':
+        history_path = f"/home/{USERNAME}/Penta_history.his"
+        cmd_suppress = "2> /dev/null"
+    else:
+        history_path = f"C:\\Users\\{USERNAME}\\Documents\\Penta_history.his"
+        cmd_suppress = "2>nul"                 
+######################################
+                   
 except Exception as ex:
     print(f"[red]WARNING:An error occured while starting Penta.\nError:{ex}\n\nyou can report it at:https://github.com/Justaus3r/Penta/issues[/red]")
 while(True):    
@@ -212,26 +174,17 @@ while(True):
         #getting cuurent directory list
         list_of_dir = os.listdir()
         tab_completer = WordCompleter(list_of_dir)    
-        SESSION = PromptSession()
+        SESSION = PromptSession(history=FileHistory(history_path))
         command = SESSION.prompt(f'{__prompt}{if_git_dir()}>>', completer=tab_completer,auto_suggest=AutoSuggestFromHistory())
-        #check OS And Store Commands for History CommaNd
-        if check_onichans_os() == 'linux':
-            try:
-                with open(f"/home/{psutil.Process().username()}/Penta_history.his","a") as Historyfile:
-                    Historyfile.write(f"{command}\n")
-                    Historyfile.close()
-            except:
-                pass
-        else:
-            try:
-                with open(f"C:\\Users\\{os.getlogin()}\\Documents\\Penta_history.his","a") as Historyfile:
-                    Historyfile.write(f"{command}\n")
-                    Historyfile.close()
-            except FileNotFoundError:
-                    pass
-        #continue if user inputs empty strings instead of giving error
-        if command == '' or command == ' ' or command == '  ' or command == '   ' or command == '    ' or command == '     ' or command == '      ' or command == '       ' or command == '        ' or command == '         ' or command == '          ' or command == '           ' or command == '            ' or command == '             ' or command == '              ' or command == '               ' or command == '                ' or command == '                 ' or command == '                  ' or command == '                   ' or command == '                    ' or command == '                     ' or command == '                      ' or command == '                       ' or command == '                        ' or command == '                         ' or command == '                          ' or command == '                           ' or command == '                            ' or command == '                             ' or command == '                              ' or command == '                               ' or command == '                                ' or command == '                                 ' or command == '                                  ' or command == '                                   ' or command == '                                    ' or command == '                                     ' or command == '                                      ' or command == '                                       ' or command == '                                        ' or command == '                                         ' or command == '                                          ' or command == '                                           ' or command == '                                            ' or command == '                                             ' or command == '                                              ' or command == '                                               ' or command == '                                                ' or command == '                                                 ' or command == '                                                  ' or command == '                                                   '    :
+        # Check if the command is empty srting literal then continue and don't write history
+        if len(command.strip()) == 0:
             continue
+        #check OS And Store Commands for History Command
+        try:
+            with open(history_path,"a") as Historyfile:
+                Historyfile.write(f"{command}\n")
+        except FileNotFoundError:
+            pass
         if command == 'clear' or command == 'cls' or command == 'clr' :
             clear()
         elif command[:2] == 'cd' and len(command) > 2:
@@ -519,7 +472,7 @@ while(True):
             for limit in range (10):
                 try:
                     print(f"[green]{Keys[limit]} -------- {Values[limit]}[/green]")
-                except:
+                except Exception:
                     pass              
             #Network info:
             print("[blue]Network info:[/blue]")
@@ -1196,9 +1149,9 @@ while(True):
                 sdir.seedir(os.getcwd())    
         else:
             try:
-                arg = shlex.split(f"{command} 2>nul")
-                subprocess.run(arg,shell=True,check=True)
-            except Exception:
+                arg = shlex.split(f"{command}")
+                subprocess.run(arg,shell=True,check=True,stderr=subprocess.DEVNULL)
+            except Exception as ex:
                 print(f"[red]Command not found[/red]")    
     except KeyboardInterrupt:
         print("KeyboardInterrupt")   
@@ -1210,5 +1163,4 @@ Error:
 {ex}
 report this error at https://github.com/Justaus3r/Penta/issues[/red]
  """)
-else:
-    sys.exit(0)
+
