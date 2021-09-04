@@ -50,6 +50,8 @@ from prompt_toolkit.auto_suggest import AutoSuggestFromHistory
 from prompt_toolkit.completion import WordCompleter
 import seedir as sdir #for directory tree view
 
+
+# PENTA FUNCTIONS AND INITIALIZATION PART
 try:
     ######Created an Class for Downloading files,might need it in future########
     class DownloadFile:
@@ -80,9 +82,9 @@ try:
     #define a function to check os
     def check_onichans_os():
       if os.name == 'nt':
-         Os = 'Win'
-         return Os
-      Os = 'linux'
+          Os = 'Win'
+      else:
+          Os = 'linux'
       return Os
 
     #~VERSION AND BUILD DATE-----------------
@@ -104,7 +106,7 @@ try:
     #check the config file to see if the banner is to printed 
     try:
         with open(f"configs{os.sep}Bannerconfs{os.sep}bannerbool","r") as bannerbool:
-            Bool_value = bannerbool.read()       
+            Bool_value = bannerbool.read().strip().strip('\n')       
     #print banner if bool value is 1 otherwise continue
         if Bool_value == '1':
             try:
@@ -122,11 +124,12 @@ try:
         # check the configuration file to see if custom prompt is to be printed
     try:
         with open(f"configs{os.sep}prompt{os.sep}promptconf","r") as promptconf:
-            _read_conf = promptconf.read()
+            _read_conf = promptconf.read().strip().strip('\n') # i know a very bad implementation
     except FileNotFoundError:
         print("[red]Configuration file missing![/red]")
-        sys.exit(1)                
-    if _read_conf == '1':
+        sys.exit(1)
+             
+    if _read_conf == "1":
         #Try and see if the prompt file exist,if not throw an error
         try:
             with open(f"configs{os.sep}prompt{os.sep}prompt","r") as promptfile:
@@ -148,26 +151,25 @@ try:
                 print("[red]Please create a prompt file in configs/prompt/ \nor change the configuration file(i.e:configs/prompt/promptconf) from 1 to 0[/red]")
                 sys.exit(1)                    
     else:
-            __prompt__cwd = True
+        __prompt__cwd = True
 
     #Getting username and System command error supression
     USERNAME = getuser()
     #Setting history directory for windows and linux
     if check_onichans_os() == 'linux':
         history_path = f"/home/{USERNAME}/Penta_history.his"
-        cmd_suppress = "2> /dev/null"
     else:
-        history_path = f"C:\\Users\\{USERNAME}\\Documents\\Penta_history.his"
-        cmd_suppress = "2>nul"                 
+        history_path = f"C:\\Users\\{USERNAME}\\Documents\\Penta_history.his"                
 ######################################
                    
 except Exception as ex:
+    input()
     print(f"[red]WARNING:An error occured while starting Penta.\nError:{ex}\n\nyou can report it at:https://github.com/Justaus3r/Penta/issues[/red]")
 while(True):    
     try:
         #if the bool(i.e:__prompt__cwd) is true then set prompt to current directory
         try:
-            if __prompt__cwd is True:
+            if __prompt__cwd:
                 __prompt = os.getcwd()
         except Exception:
             __prompt = os.getcwd()
@@ -185,7 +187,7 @@ while(True):
                 Historyfile.write(f"{command}\n")
         except FileNotFoundError:
             pass
-        if command == 'clear' or command == 'cls' or command == 'clr' :
+        if command in ['clr','clear','cls'] :
             clear()
         elif command[:2] == 'cd' and len(command) > 2:
             path =command[3:]
@@ -1076,16 +1078,16 @@ while(True):
             host = command.split()[1]       
             if check_onichans_os() == 'linux':
                 troute_script = """
-    from icmplib import traceroute
-    hops = traceroute("%s")
-    print('Distance/TTL    Address            Average round-trip time')
-    Last_Distance = 0
-    for hop in hops:
-        if Last_Distance + 1 != hop.distance:
-            print('Some gateways are not responding')
-        # See the Hop class for details
-        print(f'{hop.distance}               {hop.address}              {hop.avg_rtt} ms')
-        Last_Distance = hop.distance        
+from icmplib import traceroute
+hops = traceroute("%s")
+print('Distance/TTL    Address            Average round-trip time')
+Last_Distance = 0
+for hop in hops:
+    if Last_Distance + 1 != hop.distance:
+        print('Some gateways are not responding')
+    # See the Hop class for details
+    print(f'{hop.distance}               {hop.address}              {hop.avg_rtt} ms')
+    Last_Distance = hop.distance        
                 
             """%host
                 with open("Tempscr.py","a") as TempScript:
@@ -1149,7 +1151,7 @@ while(True):
                 sdir.seedir(os.getcwd())    
         else:
             try:
-                arg = shlex.split(f"{command}")
+                arg = shlex.split(f"\"{command}\"")
                 subprocess.run(arg,shell=True,check=True,stderr=subprocess.DEVNULL)
             except Exception as ex:
                 print(f"[red]Command not found[/red]")    
