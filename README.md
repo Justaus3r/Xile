@@ -17,6 +17,6 @@
 ### **A work in progess**
 
 
-### **Codebase on this repo is very outdated**
+### **New codebase will be pushed soon(maybe)**
 
 Xile is a shell i am writing in python.
