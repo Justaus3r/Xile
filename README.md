@@ -17,6 +17,6 @@
 ### **A work in progess**
 
 
-### **New codebase will be pushed soon(maybe)**
+### **New codebase will be pushed after my exams are over and i have re-written the minimal codebase(maybe)**
 
 Xile is a shell i am writing in python.
